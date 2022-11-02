@@ -1,0 +1,57 @@
+name: "GitHub Pages"
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Doc
+        uses: actions/checkout@v3
+        with:
+          path: xua-doc
+      - name: Checkout LP
+        uses: actions/checkout@v3
+        with:
+          repository: kmirzavaziri/xua-lp
+          path: xua-lp
+          token: ${{ secrets.KAMYAR_PAT }}
+      - name: Assemble
+        run: |
+          sudo mkdir -p ./public/xua
+          sudo cp -a ${{ github.workspace }}/xua-lp/. ./public/xua
+          sudo cp -a ${{ github.workspace }}/xua-doc/build/html/. ./public/xua/docs/
+          cd ./public/xua/docs/ && sudo zip -r xua-doc.zip *
+      # - name: Setup Pages
+      #   id: pages
+      #   uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
