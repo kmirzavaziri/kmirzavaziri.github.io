@@ -1,0 +1,670 @@
+@media print {
+    body {
+        zoom: 63%;
+    }
+
+    .container {
+        min-width: calc(100% - 80px);
+    }
+
+    .km-screen-only {
+        display: none !important;
+    }
+
+    .km-tool {
+        filter: none !important;
+        opacity: 1 !important;
+        width: 28px !important;
+        margin: 3px !important;
+    }
+
+    .km-contact-item img {
+        width: 26px;
+        margin: 4px 10px;
+    }
+
+    .km-page-break {
+        page-break-before: always;
+        height: 3rem;
+    }
+}
+
+@media screen {
+    .km-print-only {
+        display: none !important;
+    }
+}
+
+body {
+    background-color: #F8F8F8;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+}
+
+.km-h3 {
+    display: inline-block;
+    font-weight: 900;
+    margin: 2rem 0 1rem 0;
+    background-color: #6e27b0;
+    color: #f4eaff;
+    padding: 5px 15px;
+    border-radius: 1999px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.km-h3:hover {
+    padding-left: 50px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+p,
+li {
+    margin: .3rem 0;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+a {
+    color: #4285F4;
+}
+
+a.km-inherit {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+my-4 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+#km-avatar {
+    background-color: #d6d6d6;
+    width: 300px;
+    height: 300px;
+    border-radius: 1999px;
+    transform: rotate(90deg);
+    background-image: url("assets/avatar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+#km-avatar:hover {
+    background-position: 0 150px;
+}
+
+#km-header-title {
+    text-align: right;
+    font-family: 'Lexend', sans-serif;
+
+    background-image: url("assets/graphics/cloud.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding: 110px 50px 20px 40px;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor: pointer;
+}
+
+#km-header-title:hover {
+    animation: shake 0.6s linear infinite;
+}
+
+.km-falling-character {
+    position: absolute;
+    font-family: 'Ubuntu Mono', monospace;
+    color: #7a7a7a;
+    animation: fall 3s cubic-bezier(0.33333, 0.66667, 0.66667, 1) infinite;
+    user-select: none;
+    z-index: -1;
+    opacity: 0;
+    font-size: 1.3rem;
+}
+
+#km-header-fname {
+    text-transform: uppercase;
+    color: #3D3D3D;
+    font-weight: 700;
+    font-size: 50pt;
+    line-height: 0;
+}
+
+#km-header-lname {
+    text-transform: uppercase;
+    color: #3D3D3D;
+    font-weight: 300;
+    font-size: 40pt;
+    line-height: 45pt;
+}
+
+#km-header-role {
+    color: #3D3D3D;
+    font-size: 20pt;
+    font-weight: 400;
+    margin-top: 5pt;
+    margin-right: 12pt;
+    display: inline-block;
+    line-height: 0;
+}
+
+.km-tools-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    color: #3d3d3d;
+    opacity: .4;
+}
+
+.km-tools-ln {
+    height: 2px;
+    background: #3d3d3d;
+    opacity: .2;
+    margin: 0 5px;
+}
+
+.km-tool {
+    width: 30px;
+    margin: 3px;
+    filter: saturate(0);
+    opacity: .5;
+    transition: .4s ease;
+}
+
+.km-tool:hover {
+    filter: none;
+    opacity: 1;
+}
+
+.km-section .km-section-header {
+    border-radius: 21px 21px 0 0;
+
+    height: 60px;
+    font-size: 1.75rem;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+
+.km-section .km-section-header:hover {
+    font-weight: 900;
+}
+
+.km-item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.km-logo {
+    width: 70px;
+    border-radius: 1999px;
+    transition: 1s ease;
+}
+
+.km-logo:not(.km-logo-no-rotate):hover {
+    transform: rotate(360deg);
+}
+
+.km-item-header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.km-subtitle {
+    display: block;
+}
+
+.km-subtitle-light {
+    font-style: italic;
+    opacity: .7;
+}
+
+#km-terminal {
+    margin: 1rem 0;
+    height: 19.8rem;
+    font-family: 'Ubuntu Mono', monospace;
+    overflow-y: scroll;
+}
+
+#km-terminal::-webkit-scrollbar {
+    width: 5px;
+}
+
+#km-terminal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#km-terminal::-webkit-scrollbar-thumb {
+    border-radius: 21px;
+    background: #888;
+    transition: .3s ease;
+}
+
+#km-terminal::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#km-terminal-user-input {
+    color: #fdfdfd;
+    outline: none;
+}
+
+#km-terminal-current-line {
+    gap: .5rem;
+}
+
+.km-terminal-context {
+    font-weight: bold;
+    white-space: nowrap;
+    display: inline;
+}
+
+.km-terminal-loc {
+    color: #89b777;
+}
+
+.km-terminal-cwd {
+    color: #60aee9;
+}
+
+.km-terminal-history-item pre {
+    margin: 0;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.km-skill-table {
+    margin: 1rem 0;
+}
+
+.km-skill-amount {
+    width: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.km-skill-pad {
+    width: 1.5rem;
+}
+
+.km-skill {
+    width: 9rem;
+    font-weight: 700;
+}
+
+.km-skill-low {
+    opacity: .5;
+}
+
+.km-sections-header {
+    background-image: url("assets/graphics/cloud.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    min-height: 190px;
+    min-width: 360px;
+}
+
+.km-sections-header h2 {
+    text-transform: uppercase;
+    font-size: 60pt;
+    color: #3D3D3D;
+    line-height: 65pt;
+    text-align: right;
+}
+
+.km-section .km-section-header {
+    width: 100%;
+    height: 88px;
+    font-size: 29pt;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.km-section .km-section-body {
+    padding: 1px 1rem .25rem 1rem;
+    margin: 0;
+    border-radius: 0 0 21px 21px;
+}
+
+.km-section.km-section-green .km-section-header {
+    background-color: #0F9D58;
+    color: #E8FDF3;
+}
+
+.km-section.km-section-green .km-section-body {
+    background-color: #E8FDF3;
+    color: #0F9D58;
+}
+
+.km-section.km-section-blue .km-section-header {
+    background-color: #4285F4;
+    color: #E7F0FE;
+}
+
+.km-section.km-section-blue .km-section-body {
+    background-color: #E7F0FE;
+    color: #4285F4;
+}
+
+.km-section.km-section-yellow .km-section-header {
+    background-color: #F4B400;
+    color: #FFF8E5;
+}
+
+.km-section.km-section-yellow .km-section-body {
+    background-color: #FFF8E5;
+    color: #8B6909;
+}
+
+.km-section.km-section-red .km-section-header {
+    background-color: #DB4437;
+    color: #FBEBE9;
+}
+
+.km-section.km-section-red .km-section-body {
+    background-color: #FBEBE9;
+    color: #DB4437;
+}
+
+.km-section.km-section-purple .km-section-header {
+    background-color: #6e27b0;
+    color: #f4eaff;
+    background-image: url(assets/graphics/cosmos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.km-section.km-section-purple .km-section-body {
+    background-color: #f4eaff;
+    color: #6e27b0;
+}
+
+.km-section.km-section-gray .km-section-header {
+    background-color: #DBDBDB;
+    color: #3D3D3D;
+}
+
+.km-section.km-section-gray .km-section-body {
+    background-color: #FFFFFF;
+    color: #414042;
+}
+
+.km-section-black .km-section-header {
+    background-color: #373737;
+    color: #fdfdfd;
+}
+
+.km-section-black .km-section-body {
+    background-color: #1e1e1e;
+    color: #fdfdfd;
+}
+
+.km-badge {
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 20px;
+    padding: 0 10px;
+    color: #FFFFFF;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.km-badge:hover {
+    background-color: transparent !important;
+}
+
+.km-badge.km-badge-green {
+    background-color: #0F9D58;
+    border: solid 2px #0F9D58;
+}
+
+.km-badge.km-badge-green:hover {
+    color: #0F9D58;
+}
+
+.km-badge.km-badge-blue {
+    background-color: #4285F4;
+    border: solid 2px #4285F4;
+}
+
+.km-badge.km-badge-blue:hover {
+    color: #4285F4;
+}
+
+.km-badge.km-badge-yellow {
+    background-color: #F4B400;
+    border: solid 2px #F4B400;
+}
+
+.km-badge.km-badge-yellow:hover {
+    color: #F4B400;
+}
+
+.km-badge.km-badge-red {
+    background-color: #DB4437;
+    border: solid 2px #DB4437;
+}
+
+.km-badge.km-badge-red:hover {
+    color: #DB4437;
+}
+
+.km-badge.km-badge-gray {
+    background-color: #373737;
+    border: solid 2px #373737;
+}
+
+.km-badge.km-badge-gray:hover {
+    color: #373737;
+}
+
+.km-text-green {
+    color: #0F9D58;
+}
+
+.km-text-blue {
+    color: #4285F4;
+}
+
+.km-text-yellow {
+    color: #8B6909;
+}
+
+.km-text-red {
+    color: #DB4437;
+}
+
+.km-easter-toggle-wrapper {
+    margin: 20px 5px;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #888888;
+    transition: .5s ease;
+    padding: 4px;
+}
+
+.km-easter-toggle-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 1999px;
+    background-color: #fff;
+    box-shadow: 0 0 3px 1px rgb(0 0 0 / 10%);
+    transition: .5s ease;
+}
+
+.km-easter-toggle-wrapper:hover {
+    background-color: #0F9D58;
+}
+
+.km-easter-toggle-wrapper:hover .km-easter-toggle-circle {
+    transform: translateX(30px);
+}
+
+.km-easter-squidward {
+    width: 70px;
+    height: 70px;
+    background-image: url("assets/projects/squidward.png");
+    background-size: cover;
+}
+
+.km-easter-squidward:hover {
+    background-image: url("assets/projects/squidward-happy.png");
+}
+
+.km-easter-programming-anchor {
+    text-decoration: none;
+    font-weight: 900;
+    font-family: 'Lexend', sans-serif;
+    color: #6e27b0;
+}
+
+.km-easter-programming-wrapper {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.km-easter-programming-lt, .km-easter-programming-gt {
+    font-size: 2rem;
+}
+
+.km-easter-programming-slash {
+    font-size: 0;
+    transition: .5s ease;
+}
+
+.km-easter-programming-wrapper:hover .km-easter-programming-slash {
+    font-size: 2rem;
+}
+
+.km-easter-bike {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    background-image: url("assets/passions/bicycle-body.png");
+    background-size: contain;
+}
+
+.km-easter-bike-wheel {
+    width: 24px;
+    height: 24px;
+}
+
+.km-easter-bike-wheel-l {
+    position: absolute;
+    left: 1px;
+    top: 28px;
+}
+
+.km-easter-bike-wheel-r {
+    position: absolute;
+    left: 44px;
+    top: 28px;
+}
+
+.km-easter-bike:hover .km-easter-bike-wheel {
+    animation: rotating 2s linear infinite;
+}
+
+.km-gallery-item {
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.km-gallery-see-more {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.km-gallery-see-more-text {
+    transition: .3s ease;
+}
+
+.km-gallery-see-more-text:hover {
+    color: #4285F4;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

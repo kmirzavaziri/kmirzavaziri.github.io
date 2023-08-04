@@ -1,0 +1,1136 @@
+tools:
+  - image: assets/tools/latex.png
+    text: Latex
+    url: https://en.wikipedia.org/wiki/LaTeX
+
+  - image: assets/tools/coq.png
+    text: Coq
+    url: https://en.wikipedia.org/wiki/Coq
+
+  - image: assets/tools/figma.png
+    text: Figma
+    url: https://en.wikipedia.org/wiki/Figma_(software)
+
+  - image: assets/tools/wordpress.png
+    text: WordPress
+    url: https://en.wikipedia.org/wiki/WordPress
+
+  - image: assets/tools/bootstrap.png
+    text: Bootstrap
+    url: https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)
+
+  - image: assets/tools/sass.png
+    text: Sass
+    url: https://en.wikipedia.org/wiki/Sass_(style_sheet_language)
+
+  - image: assets/tools/html.png
+    text: HTML
+    url: https://en.wikipedia.org/wiki/HTML
+
+  - image: assets/tools/css.png
+    text: CSS
+    url: https://en.wikipedia.org/wiki/CSS
+
+  - image: assets/tools/javascript.png
+    text: JavaScript
+    url: https://en.wikipedia.org/wiki/JavaScript
+
+  - image: assets/tools/twig.png
+    text: Twig
+    url: https://en.wikipedia.org/wiki/Twig_(template_engine)
+
+  - image: assets/tools/jinja.png
+    text: Jinja
+    url: https://en.wikipedia.org/wiki/Jinja_(template_engine)
+
+  - image: assets/tools/grpc.png
+    text: gRPC
+    url: https://en.wikipedia.org/wiki/GRPC
+
+  - image: assets/tools/protobuf.png
+    text: Protocol Buffers
+    url: https://en.wikipedia.org/wiki/Protocol_Buffers
+
+  - image: assets/tools/django.png
+    text: Django
+    url: https://en.wikipedia.org/wiki/Django_(web_framework)
+
+  - image: assets/tools/symfony.png
+    text: Symfony
+    url: https://en.wikipedia.org/wiki/Symfony
+
+  - image: assets/tools/python.png
+    text: Python
+    url: https://en.wikipedia.org/wiki/Python_(programming_language)
+
+  - image: assets/tools/go.png
+    text: Go
+    url: https://en.wikipedia.org/wiki/Go_(programming_language)
+
+  - image: assets/tools/php.png
+    text: PHP
+    url: https://en.wikipedia.org/wiki/PHP
+
+  - image: assets/tools/rabbitmq.png
+    text: RabbitMQ
+    url: https://en.wikipedia.org/wiki/RabbitMQ
+
+  - image: assets/tools/redis.png
+    text: Redis
+    url: https://en.wikipedia.org/wiki/Redis
+
+  - image: assets/tools/mongodb.png
+    text: MongoDB
+    url: https://en.wikipedia.org/wiki/MongoDB
+
+  - image: assets/tools/postgresql.png
+    text: PostgreSQL
+    url: https://en.wikipedia.org/wiki/PostgreSQL
+
+  - image: assets/tools/mysql.png
+    text: MySQL
+    url: https://en.wikipedia.org/wiki/MySQL
+
+  - image: assets/tools/nginx.png
+    text: Nginx
+    url: https://en.wikipedia.org/wiki/Nginx
+
+  - image: assets/tools/kubernetes.png
+    text: Kubernetes
+    url: https://en.wikipedia.org/wiki/Kubernetes
+
+  - image: assets/tools/docker.png
+    text: Docker
+    url: https://en.wikipedia.org/wiki/Docker_(software)
+
+  - image: assets/tools/ansible.png
+    text: Ansible
+    url: https://en.wikipedia.org/wiki/Ansible_(software)
+
+  - image: assets/tools/ubuntu.png
+    text: Ubuntu
+    url: https://en.wikipedia.org/wiki/Ubuntu
+
+contact:
+  - image: assets/contact/phone.png
+    text: "+989392501338"
+    url: "tel:+989392501338"
+
+  - image: assets/contact/email.png
+    text: "kmirzavaziri@gmail.com"
+    url: "mailto:kmirzavaziri@gmail.com"
+
+  - image: assets/avatar-rounded.png
+    text: "k.mirzavaziri.com"
+    url: "https://k.mirzavaziri.com"
+
+  - image: assets/contact/linkedin.png
+    text: "LinkedIn"
+    url: "https://linkedin.com/in/kmirzavaziri"
+
+  - image: assets/contact/stackoverflow.png
+    text: "Stack Overflow"
+    url: "https://stackoverflow.com/users/5774661"
+
+  - image: assets/contact/instagram.png
+    text: "Instagram"
+    url: "https://instagram.com/kmirzavaziri"
+
+  - image: assets/contact/telegram.png
+    text: "Telegram"
+    url: "https://t.me/kmirzavaziri"
+
+  - image: assets/tools/github.png
+    text: GitHub
+    url: https://github.com/kmirzavaziri
+
+  - image: assets/tools/gitlab.png
+    text: GitLab
+    url: https://gitlab.com/kmirzavaziri
+
+  - image: assets/contact/resume.png
+    text: Download Résumé
+    url: https://k.mirzavaziri.com/assets/KamyarMirzavaziriResume2023Sep.pdf
+
+rows:
+  - columns:
+    - width: 4
+      content:
+        - section:
+            style: green
+            title: About Me
+            content:
+              - list:
+                - content:
+                  - text: "2+ years experience in enterprise companies, utilizing 15+ tools, provided a valuable insights into aspects of software engineering."
+                - content:
+                  - text: "The portfolio spanning small startup projects to highly-loaded enterprise apps, helps the development of full-stack apps and improvement and scale of existing ones."
+        - contact_or_terminal:
+        - section:
+            style: yellow
+            title: Education
+            content:
+              - item:
+                  image: "assets/edu/sharif.png"
+                  url: https://en.sharif.edu/
+                  title: "M.Sc., Computer Science"
+                  subtitles:
+                    - text: "University of Tehran"
+                    - text: "2022 - Present"
+                      style: light
+              - item:
+                  image: "assets/edu/tehran.png"
+                  url: https://ut.ac.ir/en
+                  title: "B.Sc., Computer Science"
+                  subtitles:
+                    - text: "University of Tehran"
+                    - text: "2017 - 2022"
+                      style: light
+        - section:
+            style: red
+            title: Languages
+            content:
+              - item:
+                  image: "assets/lang/en.png"
+                  url: https://en.wikipedia.org/wiki/English_language
+                  title: "English"
+                  subtitles:
+                    - text: "Can speak fluently"
+              - item:
+                  image: "assets/lang/fa.png"
+                  url: https://en.wikipedia.org/wiki/Persian_language
+                  title: "Farsi"
+                  subtitles:
+                    - text: "Native speaker"
+
+
+    - width: 8
+      content:
+        - section:
+            style: gray
+            title: Work Experience
+            content:
+              - item:
+                  image: "assets/work/divar.png"
+                  url: https://divar.ir/
+                  title: "Mid-Level Software Engineer <span class='fw-normal'>@ Divar</span>"
+                  uppercase_title: true
+                  cotitle: "2022 - Present"
+                  subtitles:
+                    - text: "The biggest Iranian classified ads platform, alternative for eBay in Iran."
+                      style: light
+                  content:
+                    - badge:
+                        style: green
+                        text: K8s
+                    - badge:
+                        style: green
+                        text: Docker
+                    - badge:
+                        style: green
+                        text: Gitlab CI
+                    - badge:
+                        style: blue
+                        text: Go
+                    - badge:
+                        style: blue
+                        text: Python
+                    - badge:
+                        style: red
+                        text: Redis
+                    - badge:
+                        style: red
+                        text: PostgreSQL
+                    - badge:
+                        style: red
+                        text: MongoDB
+                    - badge:
+                        style: red
+                        text: RabbitMQ
+                    - list:
+                      - content:
+                        - text: "Took a major role in redesigning the Submit micro-service from Python to Go and REST to gRPC, achieved the following."
+                        - list:
+                          - content:
+                            - text: "20% faster development."
+                          - content:
+                            - text: "99.9% up-time."
+                          - content:
+                            - text: "Sub-100 ms response times (upper 99 percentile)."
+                          - content:
+                            - text: "Average response size &lt; 50 KiB (down from &gt; 1 MiB)."
+                          - content:
+                            - text: "A notable 10% reduction in call center load."
+                      - content:
+                        - text: "Developed an auto-migrator to convert 250+ messy forms to new structured widget forms, estimated to reduce the initial development time by 5 months."
+                      - content:
+                        - text: "Optimized the Post Stats micro-service, freeing up 24 CPU cores and 120 GiB of memory, resulting in a remarkable 66% reduction in consumed resources."
+                      - content:
+                        - text: "Managed 5+ disaster, once recovered 85% of lost data, by writing a script to aggregate the data from action logs and restore data back to DB."
+              - item:
+                  image: "assets/work/avistopia.png"
+                  url: https://en.avistopia.com/
+                  title: "Mid-Level Software Engineer <span class='fw-normal'>@ Avistopia</span>"
+                  uppercase_title: true
+                  cotitle: "2021 - 2022"
+                  subtitles:
+                    - text: "Learn-Compete-Work platform (startup)."
+                      style: light
+                  content:
+                    - badge:
+                        style: green
+                        text: Docker
+                    - badge:
+                        style: green
+                        text: Nginx
+                    - badge:
+                        style: green
+                        text: GitHub Actions
+                    - badge:
+                        style: blue
+                        text: PHP
+                    - badge:
+                        style: blue
+                        text: JS
+                    - badge:
+                        style: red
+                        text: MySQL
+                    - badge:
+                        style: red
+                        text: Redis
+                    - badge:
+                        style: yellow
+                        text: Twig
+                    - badge:
+                        style: yellow
+                        text: Sass
+                    - list:
+                      - content:
+                        - text: "Led 3 engineers under Agile framework; together created a product now hosting 2000+ users and offering 60+ courses and workshops."
+                      - content:
+                        - text: "Developed a complex registration service with features such as team registration, and installment payment plans, which attracted over 400 users in the initial days."
+                      - content:
+                        - text: "Implemented a custom secure web-based media player using JS, to prevent paid course record leakages, resulting in a 50% reduction in such incidents."
+                      - content:
+                        - text: "Led the development of XUA, a PHP ORM facilitating business complexities such as foreign keys and many-to-many relations, accelerated development by approximately 20%."
+              - item:
+                  image: "assets/work/digikala.png"
+                  url: https://www.digikala.com/
+                  title: "Junior Software Engineer <span class='fw-normal'>@ DigiKala</span>"
+                  uppercase_title: true
+                  cotitle: "2020 - 2021"
+                  subtitles:
+                    - text: "The biggest E-commerce in Mena Region, alternative for Amazon in Iran."
+                      style: light
+                  content:
+                    - badge:
+                        style: blue
+                        text: PHP
+                    - badge:
+                        style: blue
+                        text: Symfony
+                    - badge:
+                        style: blue
+                        text: JS
+                    - badge:
+                        style: red
+                        text: MySQL
+                    - badge:
+                        style: red
+                        text: Redis
+                    - badge:
+                        style: yellow
+                        text: Twig
+                    - list:
+                      - content:
+                        - text: "Implemented a queue management system for sellers, boosting satisfaction by an approximately 20%, faced challenges, such as the following."
+                        - list:
+                          - content:
+                            - text: "Integrated the back-end API with third-party ticket-dispensing kiosks, collaborating closely with an external team."
+                          - content:
+                            - text: "Designed a complex state machine with 50+ states to ensure fair prioritization without compromising user satisfaction."
+                      - content:
+                        - text: "Designed a warehouse aisle security tracking system with storage constraints (price, category, size), resulting in monthly savings of $100K."
+  - fav_tools:
+  - columns:
+    - width: 6
+      content:
+      - section:
+          style: blue
+          title: Volunteer Experience
+          content:
+            - item:
+                title: Chief Scientific Officer (CSO)
+                cotitle: 2019 - 2020
+            - item:
+                title: Head of Software Squad
+                cotitle: 2018 - 2019
+                subtitles:
+                  - text: Scientific Association of Computer Science, University of Tehran
+                    style: light
+                content:
+                  - list:
+                    - content:
+                      - text: Managed 10+ workshops and courses, such as the first Flutter course in Iran with 60+ students.
+            - item:
+                title: Teaching Assistant
+                subtitles:
+                  - text: Department of Mathematics, CS, and Statistics, University of Tehran
+                    style: light
+                content:
+                  - list:
+                    - content:
+                      - text: <b>Number Theory</b>
+                      - list:
+                        - content:
+                          - text: by <a href="https://www.researchgate.net/profile/Amir-Ghadermarzi">Amir Ghadermarzi.</a>
+                    - content:
+                      - text: <b>Foundations of Mathematics</b>
+                      - list:
+                        - content:
+                          - text: by <a href="http://mmojtahedi.ir/">Mojtaba Mojtahedi</a>
+                    - content:
+                      - text: <b>Logic</b>
+                      - list:
+                        - content:
+                          - text: by <a href="http://mmojtahedi.ir/">Mojtaba Mojtahedi</a>
+                    - content:
+                      - text: <b>Linear Algebra</b>
+                      - list:
+                        - content:
+                          - text: by <a href="https://en.wikipedia.org/wiki/Siamak_Yassemi">Siamak Yassemi</a>
+            - item:
+                title: Technical Manager
+                cotitle: 2015 - 2021
+                subtitles:
+                  - text: Arithland Educational Center
+                    style: light
+                content:
+                  - list:
+                    - content:
+                      - text: Implemented 4+ applications, turned the old-fashioned competitions into high-tech ones.
+      - section:
+          style: red
+          title: Publications
+          content:
+            - item:
+                title: <a class="km-inherit" href="https://jas.shahroodut.ac.ir/article_2325_51e352c41a02d11fd7a3511d42f35baf.pdf" target="_blank">DIVISOR TOPOLOGIES AND THEIR ENUMERATION</a>
+                subtitles:
+                  - text: Journal of Algebraic Systems · 2022
+                  - text: F. Esmaeeli, K. Mirzavaziri, M. Mirzavaziri
+                    style: light
+            - item:
+                title: <a class="km-inherit" href="https://file.scirp.org/pdf/OJDM_2016041217170605.pdf" target="_blank">DOUBLE DERANGEMENT PERMUTATIONS</a>
+                subtitles:
+                  - text: Open Journal of Discrete Mathematics (OJDM) · 2016
+                  - text: P. Daneshmand, K. Mirzavaziri, M. Mirzavaziri
+                    style: light
+            - item:
+                title: <a class="km-inherit" href="https://www.researchgate.net/publication/336869321_A_Characterization_For_2-Self-Centered_Graphs" target="_blank">A CHARACTERIZATION FOR 2-SELF-CENTERED GRAPHS</a>
+                subtitles:
+                  - text: Seminarium Matematyka Dyskretna · 2015
+                  - text: K. Mirzavaziri, M. Mirzavaziri, M. H. Shekarriz
+                    style: light
+            - item:
+                title: <a class="km-inherit" href="https://profdoc.um.ac.ir/articles/a/1062457.pdf" target="_blank">k-COMBINATIONS OF AN UNLABELLED GRAPH</a>
+                subtitles:
+                  - text: Creative Mathematics and Informatics · 2015
+                  - text: M. R. Ebrahimi Vishki, Kamyar Mirzavaziri, Madjid Mirzavaziri
+                    style: light
+      - section:
+          style: green
+          title: Certificates
+          content:
+            - item:
+                title: Go (Intermediate) Certificate
+                subtitles:
+                  - text: HackerRank · 2023
+                    style: light
+                content:
+                  - link:
+                      text: https://www.hackerrank.com/certificates/a414c8cc9c1e
+                      url: https://www.hackerrank.com/certificates/a414c8cc9c1e
+            - item:
+                title: SQL (Advanced) Certificate
+                subtitles:
+                  - text: HackerRank · 2023
+                    style: light
+                content:
+                  - link:
+                      text: https://www.hackerrank.com/certificates/259fe6992f88
+                      url: https://www.hackerrank.com/certificates/259fe6992f88
+            - item:
+                title: Rest API (Intermediate) Certificate
+                subtitles:
+                  - text: HackerRank · 2023
+                    style: light
+                content:
+                  - link:
+                      text: https://www.hackerrank.com/certificates/8820f37fed23
+                      url: https://www.hackerrank.com/certificates/8820f37fed23
+    - width: 6
+      content:
+      - section:
+          style: gray
+          title: Skills
+          content:
+            - item:
+                title: DevOps
+                uppercase_title: true
+                style: km-text-green
+                content:
+                  - skills:
+                      color: green
+                      content:
+                        - name: Linux (Ubuntu)
+                          amount: 6Y
+                        - name: Docker
+                          amount: 2Y
+                        - name: Kubernetes
+                          amount: 1Y
+                        - name: GitHub Actions
+                          amount: 1Y
+                        - name: Gitlab CI
+                          amount: 1Y
+                        - name: Nginx
+                          amount: 2Y
+                        - name: Ansible
+                          amount: 1Y
+            - item:
+                title: Databases & Queues
+                uppercase_title: true
+                style: km-text-red
+                content:
+                  - skills:
+                      color: red
+                      content:
+                        - name: MySQL
+                          amount: 9Y
+                        - name: Redis
+                          amount: 3Y
+                        - name: PostgreSQL
+                          amount: 1Y
+                        - name: MongoDB
+                          amount: 1Y
+                        - name: RabbitMQ
+                          amount: 1Y
+            - item:
+                title: Languages & Frameworks
+                uppercase_title: true
+                style: km-text-blue
+                content:
+                  - skills:
+                      color: blue
+                      content:
+                        - name: Python
+                          amount: 6Y
+                        - name: Django
+                          amount: 1Y
+                        - name: Go
+                          amount: 1Y
+                        - name: PHP
+                          amount: 9Y
+                        - name: Symfony
+                          amount: 1Y
+                        - name: JavaScript
+                          amount: 9Y
+                        - name: Coq
+                          amount: 1Y
+            - item:
+                title: Web
+                uppercase_title: true
+                style: km-text-yellow
+                content:
+                  - skills:
+                      color: yellow
+                      content:
+                      - name: HTML
+                        amount: 9Y
+                      - name: Jinja
+                        amount: 1Y
+                      - name: Twig
+                        amount: 2Y
+                      - name: CSS
+                        amount: 9Y
+                      - name: Sass
+                        amount: 1Y
+                      - name: UIKit
+                        amount: 1Y
+                      - name: Bootstrap
+                        amount: 9Y
+            - item:
+                title: Minor Encounters
+                uppercase_title: true
+                content:
+                  - skills:
+                      color: gray
+                      content:
+                      - name: WordPress
+                        amount: 2Y
+                      - name: UI/UX Design (Figma)
+                        amount: 1Y
+                      - name: Latex
+                        amount: 8Y
+                      - name: Flutter
+                        amount: <1Y
+                      - name: Dart
+                        amount: <1Y
+                      - name: Meta Spark
+                        amount: <1Y
+      - section:
+          style: yellow
+          title: Books
+          content:
+            - list:
+              - content:
+                - link:
+                    style: km-inherit
+                    text: "<b>Clean Code: A Handbook of Agile Software Craftsmanship</b><br><em>Robert C. Martin</em>"
+                    url: https://www.goodreads.com/book/show/3735293-clean-code
+              - content:
+                - link:
+                    style: km-inherit
+                    text: "<b>Logical Foundations</b><br><em>Benjamin C. Pierce, et al.</em>"
+                    url: https://softwarefoundations.cis.upenn.edu/lf-current/index.html
+              - content:
+                  - link:
+                      style: km-inherit
+                      text: "<b>The Go Programming Language</b><br><em>Alan A.A. Donovan, Brian W. Kernighan</em>"
+                      url: https://www.goodreads.com/book/show/25080953-the-go-programming-language
+              - content:
+                  - link:
+                      style: km-inherit
+                      text: "<b>Refactoring: Improving the Design of Existing Code</b><br><em>Martin Fowler, et al.</em>"
+                      url: https://www.goodreads.com/book/show/18624706-refactoring
+      - section:
+          style: blue
+          title: Understandings
+          content:
+            - list:
+              - content:
+                - text: Data Structures & Algorithms
+                  style: fw-bold my-2
+              - content:
+                - text: Formal Languages & Compilers
+                  style: fw-bold my-2
+              - content:
+                - text: Functional Programming (λ-Calculus)
+                  style: fw-bold my-2
+              - content:
+                - text: Object-Oriented Programming
+                  style: fw-bold my-2
+              - content:
+                - text: Model–View–Controller Pattern
+                  style: fw-bold my-2
+              - content:
+                - text: Object–Relational Mapping Technique
+                  style: fw-bold my-2
+              - content:
+                - text: Git
+                  style: fw-bold my-2
+              - content:
+                - text: Network Sockets, TCP, UDP
+                  style: fw-bold my-2
+              - content:
+                - text: HTTP
+                  style: fw-bold my-2
+              - content:
+                - text: REST APIs
+                  style: fw-bold my-2
+              - content:
+                - text: Protobuf
+                  style: fw-bold my-2
+              - content:
+                - text: gRPC
+                  style: fw-bold my-2
+  - style: km-screen-only
+    columns:
+    - width: 12
+      content:
+        - section:
+            style: purple
+            title: Portfolio
+            content:
+              - h3: Volunteer/Freelance Projects
+              - row:
+                  columns:
+                    - width: 6
+                      content:
+                        - item:
+                            image: "assets/projects/arithland.png"
+                            title: The Central Bank of Arithland
+                            url: "#"
+                            subtitles:
+                              - text: Score Tracking Web App for On-Site Competition Arithland
+                                style: light
+                            content:
+                              - badge:
+                                  style: red
+                                  text: MySQL
+                              - badge:
+                                  style: blue
+                                  text: PHP
+                              - list:
+                                - content:
+                                  - text: The Arithland competition, hosting 21K+ participants annually, and presented in various countries including the USA, France, Poland, Brazil, and Iran, relies on this project for score tracking.
+                        - item:
+                            image: "assets/projects/adventure.gif"
+                            image_style: "km-logo-no-rotate"
+                            title: "Adventure+"
+                            subtitles:
+                              - text: Mathematics and Physical Activities Promotion Game
+                                style: light
+                            content:
+                              - badge:
+                                  style: red
+                                  text: MySQL
+                              - badge:
+                                  style: blue
+                                  text: PHP
+                              - list:
+                                - content:
+                                  - text: First Adventure+ event was covered by IRNA, visit <a href="https://irna.ir/news/83539329/" target="_blank">here</a>.
+                    - width: 6
+                      content:
+                        - item:
+                            easter: toggle
+                            title: Switch
+                            url: "#"
+                            subtitles:
+                              - text: an IoT (Internet of Things) project
+                                style: light
+                            content:
+                              - badge:
+                                  style: red
+                                  text: MySQL
+                              - badge:
+                                  style: blue
+                                  text: PHP
+                              - list:
+                                - content:
+                                  - text: "Equipped lab devices with small processors and developed a Server App and a Mobile App so they can turn on or off devices anytime anywhere using the internet."
+                                - content:
+                                  - text: "The project saved a notable amount of money the lab was spending on workers."
+              - h3: Startups
+              - row:
+                  columns:
+                    - width: 6
+                      content:
+                        - item:
+                            image: "assets/projects/majarajoor.png"
+                            title: Majarajoor
+                            url: "#"
+                            subtitles:
+                              - text: Tourism Social Network
+                                style: light
+                            content:
+                              - badge:
+                                  style: red
+                                  text: MySQL
+                              - badge:
+                                  style: blue
+                                  text: PHP
+                              - badge:
+                                  style: gray
+                                  text: Wordpress
+                              - list:
+                                - content:
+                                  - text: Designed a WordPress Plugin, which serves as an API, and integrates the website with the mobile app.
+                        - item:
+                            image: "assets/projects/listouch.png"
+                            title: Listouch
+                            url: "#"
+                            subtitles:
+                              - text: Ranking Website
+                                style: light
+                            content:
+                              - badge:
+                                  style: red
+                                  text: MySQL
+                              - badge:
+                                  style: blue
+                                  text: PHP
+                              - badge:
+                                  style: gray
+                                  text: Wordpress
+                              - list:
+                                - content:
+                                  - text: Worked as a PHP Developer with a team of 7+ members.
+                                - content:
+                                  - text: Built and maintained a WordPress Theme & a Plugin which work together and manage all the ranking data.
+                                - content:
+                                  - text: Faced the challenge of database design to optimize storing and analyzing data to be as fast and straight-forward as possible, despite of multiple categories, sub-categories, different types of votes, etc.
+                    - width: 6
+                      content:
+                        - item:
+                            image: "assets/projects/my-farm.png"
+                            title: My Farm
+                            url: "#"
+                            subtitles:
+                              - text: Web/Mobile App Investment Platform
+                                style: light
+                            content:
+                              - badge:
+                                  style: green
+                                  text: Docker
+                              - badge:
+                                  style: green
+                                  text: Nginx
+                              - badge:
+                                  style: green
+                                  text: GitHub Actions
+                              - badge:
+                                  style: red
+                                  text: MySQL
+                              - badge:
+                                  style: blue
+                                  text: PHP
+                              - list:
+                                - content:
+                                  - text: Worked on the API, designing data models, endpoints, etc.
+                                - content:
+                                  - text: Had the experience of completely deploying all the technologies from scratch, using docker.
+              - h3: Personal Projects
+              - row:
+                  columns:
+                    - width: 6
+                      content:
+                        - item:
+                            image: "assets/projects/iago.jpg"
+                            title: Iago
+                            url: "#"
+                            subtitles:
+                              - text: Iago's Another Go ORM
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Go
+                              - list:
+                                - content:
+                                  - text: Realizing the absence of a robust Golang ORM, the project "Iago" was initiated to fill this gap. As a work in progress, the project holds promising potential within the community.
+                        - item:
+                            image: "assets/projects/gilda.jpg"
+                            title: Gilda
+                            url: "#"
+                            subtitles:
+                              - text: Live Currency Rate Telegram Bot
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Go
+                              - list:
+                                - content:
+                                  - text: Had the chance to implement a small service in Go from scratch.
+                        - item:
+                            image: "assets/projects/camel.jpg"
+                            title: Camel
+                            url: "#"
+                            subtitles:
+                              - text: Social-Network Profile Manager Services
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Go
+                              - list:
+                                - content:
+                                  - text: Camel project is supposed to post manage Instagram pages, Telegram channels, and Twitter pages.
+                                - content:
+                                  - text: The app's duty is not only to populate the page (with following-unfollowing people) but also crawling content from other sources and repost them on the page using given tags and topics.
+                        - item:
+                            image: "assets/projects/robot-karim.jpg"
+                            title: Robot Karim
+                            url: "#"
+                            subtitles:
+                              - text: Financial Market Trader Bot
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Python
+                              - badge:
+                                  style: blue
+                                  text: Go
+                              - list:
+                                - content:
+                                  - text: Led a team of 3 engineers, and maintained the code quality and performance.
+                                - content:
+                                  - text: Had the opportunity to learn Financial Markets, and also the basics of AI and Data Science, to be able to manage the code base.
+
+                    - width: 6
+                      content:
+                        - item:
+                            easter: squidward
+                            title: "Squidward"
+                            subtitles:
+                              - text: Course Assistant App
+                                style: light
+                            content:
+                              - badge:
+                                  style: red
+                                  text: MySQL
+                              - badge:
+                                  style: blue
+                                  text: PHP
+                              - badge:
+                                  style: gray
+                                  text: UI/UX Design (Figma)
+                              - badge:
+                                  style: gray
+                                  text: Flutter
+                              - badge:
+                                  style: gray
+                                  text: Dart
+                              - list:
+                                - content:
+                                  - text: After teaching assisting a few courses at University of Tehran, decided to create a smart system for managing a course process, especially assignments.
+                              - list:
+                                - content:
+                                  - text: The project was a Cross-Platform synced app for Android, iOS, and Web.
+                              - list:
+                                - content:
+                                  - text: Learned UI/UX design, as well as Flutter & Dart. One of full-stack experiences.
+                              - list:
+                                - content:
+                                  - text: The MVP was 70% complete but due to shortage of time, suspended the project. However, extended the idea to the Avistopia platform, which was launched as a successful startup.
+                        - item:
+                            image: "assets/projects/witan.jpg"
+                            title: Witan
+                            url: "#"
+                            subtitles:
+                              - text: Quote Reminder Mobile App
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Go
+                              - badge:
+                                  style: gray
+                                  text: Flutter
+                              - badge:
+                                  style: gray
+                                  text: Dart
+                              - list:
+                                - content:
+                                  - text: Had the opportunity to work as a full stack engineer, handling server and client apps, as well as deploy and operations.
+                        - item:
+                            image: "assets/projects/sub-rosa.png"
+                            title: Sub Rosa
+                            url: "#"
+                            subtitles:
+                              - text: Mathematics Promotion Game
+                                style: light
+                            content:
+                              - badge:
+                                  style: gray
+                                  text: Flutter
+                              - badge:
+                                  style: gray
+                                  text: Dart
+                              - list:
+                                - content:
+                                  - text: Created this simple mobile game using Flutter, based on the Eulerian graphs, in just two weeks.
+                                - content:
+                                  - text: Integrated the app with Google AdMob Service.
+                        - item:
+                            image: "assets/projects/1401-fortune.png"
+                            title: 1401 Fortune
+                            url: "https://www.instagram.com/ar/819368886121734/"
+                            subtitles:
+                              - text: Instagram Effect
+                                style: light
+                            content:
+                              - badge:
+                                  style: gray
+                                  text: Meta Spark
+                              - list:
+                                - content:
+                                  - text: The effect consists of a floating egg over the user's head telling the fortune.
+                                - content:
+                                  - text: The effect reached 69K Impressions in just 5 days.
+
+              - h3: Academic Projects
+              - row:
+                  columns:
+                    - width: 6
+                      content:
+                        - item:
+                            image: "assets/projects/cool.jpg"
+                            title: COOL Compiler
+                            url: "https://theory.stanford.edu/~aiken/software/cool/cool.html"
+                            subtitles:
+                              - text: A Compiler for The COOL Language
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: C
+                              - badge:
+                                  style: blue
+                                  text: Java
+                        - item:
+                            image: "assets/projects/assembler.gif"
+                            title: Assembler & Dis-assembler
+                            url: "#"
+                            subtitles:
+                              - text: Assembly Compiler/Decompiler Written in Assembly
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Assembly
+                        - item:
+                            image: "assets/projects/nn.jpg"
+                            title: Neural Network
+                            url: "#"
+                            subtitles:
+                              - text: An Implementation of A Neural Network From Scratch
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Python
+                              - list:
+                                - content:
+                                  - text: Implemented some flexibility features on network parameters, including dimension, layers sizes, cooling algorithm, activation function, number of classes, etc.
+                        - item:
+                            image: "assets/projects/genetic.png"
+                            title: Genetic & Memetic Algorithms
+                            url: "#"
+                            subtitles:
+                              - text: An Implementation of Genetic & Memetic Algorithms From Scratch
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Python
+                    - width: 6
+                      content:
+                        - item:
+                            image: "assets/projects/billiard.png"
+                            title: Multiplayer Billiard
+                            url: "#"
+                            subtitles:
+                              - text: Full-Featured Multiplayer Billiard Game Written in C++
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: C++
+                              - list:
+                                - content:
+                                  - text:  Faced the challenges of working directly with web sockets instead of protocols. And also calculating the required physics for billiard balls.
+                        - item:
+                            image: "assets/projects/battleship.png"
+                            title: Quoridor & Battleship
+                            url: "#"
+                            subtitles:
+                              - text: Full-Featured Multiplayer Quoridor & Battleship Games
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Python
+                        - item:
+                            image: "assets/projects/zindi.jpg"
+                            title: Insurance Data Analysis
+                            url: "#"
+                            subtitles:
+                              - text: A Data Science Bonus Project
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: R
+                              - list:
+                                - content:
+                                  - text: Learned R and implemented a project with it in less than a week.
+                        - item:
+                            image: "assets/projects/cell.gif"
+                            title: Cancer Cell Diagnosis
+                            url: "#"
+                            subtitles:
+                              - text: An Cancer Cells Diagnosis AI Agent
+                                style: light
+                            content:
+                              - badge:
+                                  style: blue
+                                  text: Python
+  - style: km-screen-only
+    columns:
+    - width: 7
+      content:
+        - section:
+            style: black
+            title: Gallery
+            content:
+              - row:
+                  columns:
+                    - width: 4
+                      content:
+                        - img:
+                            style: km-gallery-item
+                            src: "assets/gallery/cat.jpg"
+                    - width: 4
+                      content:
+                        - img:
+                            style: km-gallery-item
+                            src: "assets/gallery/wawel.jpg"
+                    - width: 4
+                      content:
+                        - img:
+                            style: km-gallery-item
+                            src: "assets/gallery/anoosh.jpg"
+              - row:
+                  columns:
+                    - width: 4
+                      content:
+                        - img:
+                            style: km-gallery-item
+                            src: "assets/gallery/krakow.jpg"
+                    - width: 4
+                      content:
+                        - img:
+                            style: km-gallery-item
+                            src: "assets/gallery/instruments.jpg"
+                    - width: 4
+                      content:
+                        - img:
+                            style: km-gallery-item
+                            src: "assets/gallery/avistopia.jpg"
+              - row:
+                  columns:
+                    - width: 12
+                      style: km-gallery-see-more
+                      content:
+                        - link:
+                            style: km-inherit km-gallery-see-more-text
+                            text: see more
+                            url: https://instagram.com/kmirzavaziri
+    - width: 5
+      content:
+        - section:
+            style: gray
+            title: Passions
+            content:
+              - item:
+                  easter: programming
+                  title: "Programming (Obviously 😅)"
+              - item:
+                  image: "assets/passions/graph.png"
+                  title: "Graphs & Combinatorics"
+              - item:
+                  image: "assets/passions/music.png"
+                  title: "Music"
+              - item:
+                  image: "assets/passions/detective.jpg"
+                  title: "Detective Fiction"
+              - item:
+                  easter: bike
+                  title: "Bicycling"
+              - item:
+                  image: "assets/passions/formal-languages.png"
+                  title: "Formal Languages"
+
