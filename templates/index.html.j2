@@ -5,7 +5,7 @@
 {%- endmacro %}
 
 {% macro render_column(column) -%}
-<div class="col-{{ column.width }} {{ column.style }}">
+<div class="col-lg-{{ column.width }} col-print-{{ column.width }} {{ column.style }}">
     {% for item in column.content %}{{ render_item(item) }}{% endfor %}
 </div>
 {%- endmacro %}
@@ -167,9 +167,7 @@
             <div class="col-8 text-center d-flex justify-content-center align-items-center">
                 <div id="km-header-title">
                     <h1 id="km-header-fname">Kamyar</h1>
-                    <br>
-                    <span id="km-header-lname">Mirzavaziri</span>
-                    <br>
+                    <span id="km-header-lname" class="d-block">Mirzavaziri</span>
                     <span id="km-header-role">Software Engineer</span>
                 </div>
             </div>
@@ -191,7 +189,7 @@
             <div class="km-tools-title">Favorite Tools</div>
             <div class="km-tools-ln flex-grow-1"></div>
             {% for tool in info.tools %}
-            <a href="{{ tool.url }}" data-bs-toggle="tooltip" data-bs-placement="top"
+            <a href="{{ tool.url }}" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
                 data-bs-title="{{ tool.text }}"><img src="{{ tool.image }}" class="km-tool"></a>
             {% endfor %}
         </div>
@@ -201,7 +199,7 @@
         	{{ render_row(row) }}
 			<div class="km-page-break"></div>
         	{% elif "fav_tools" in row %}
-				<div class="d-flex align-items-center my-4 km-screen-only">
+				<div class="align-items-center my-4 km-screen-only d-none d-xl-flex">
 					<div class="km-tools-title">Favorite Tools</div>
 					<div class="km-tools-ln flex-grow-1"></div>
 					{% for tool in info.tools %}

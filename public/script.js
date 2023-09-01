@@ -23,8 +23,11 @@ function initFallingCharacters(cloudDOM) {
         const cloudLeft = cloudRect.left + window.scrollX;
         const cloudRight = cloudRect.right + window.scrollX;
 
+        let left = cloudLeft !== cloudRight ? cloudLeft + 50 : 0;
+        let right = cloudLeft !== cloudRight ? cloudRight - 50 : window.innerWidth;
+
         const randomCharacter = Math.random() < 0.5 ? "0" : "1";
-        const randomLeft = randomPos(cloudLeft + 50, cloudRight - 50, 10)
+        const randomLeft = randomPos(left, right, 10)
 
         const characterDiv = document.createElement("div");
         characterDiv.classList.add("km-falling-character", "km-screen-only");

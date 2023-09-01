@@ -448,7 +448,7 @@ rows:
                     style: light
                 content:
                   - link:
-                      text: https://www.hackerrank.com/certificates/a414c8cc9c1e
+                      text: Show credential
                       url: https://www.hackerrank.com/certificates/a414c8cc9c1e
             - item:
                 title: SQL (Advanced) Certificate
@@ -457,7 +457,7 @@ rows:
                     style: light
                 content:
                   - link:
-                      text: https://www.hackerrank.com/certificates/259fe6992f88
+                      text: Show credential
                       url: https://www.hackerrank.com/certificates/259fe6992f88
             - item:
                 title: Rest API (Intermediate) Certificate
@@ -466,7 +466,7 @@ rows:
                     style: light
                 content:
                   - link:
-                      text: https://www.hackerrank.com/certificates/8820f37fed23
+                      text: Show credential
                       url: https://www.hackerrank.com/certificates/8820f37fed23
     - width: 6
       content:
