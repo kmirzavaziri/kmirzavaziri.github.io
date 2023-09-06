@@ -175,7 +175,7 @@ rows:
                   url: https://en.sharif.edu/
                   title: "M.Sc., Computer Science"
                   subtitles:
-                    - text: "University of Tehran"
+                    - text: "Sharif University of Technology"
                     - text: "2022 - Present"
                       style: light
               - item:
@@ -438,36 +438,46 @@ rows:
                   - text: M. R. Ebrahimi Vishki, Kamyar Mirzavaziri, Madjid Mirzavaziri
                     style: light
       - section:
-          style: green
-          title: Certificates
+          style: blue
+          title: Understandings
           content:
-            - item:
-                title: Go (Intermediate) Certificate
-                subtitles:
-                  - text: HackerRank · 2023
-                    style: light
-                content:
-                  - link:
-                      text: Show credential
-                      url: https://www.hackerrank.com/certificates/a414c8cc9c1e
-            - item:
-                title: SQL (Advanced) Certificate
-                subtitles:
-                  - text: HackerRank · 2023
-                    style: light
-                content:
-                  - link:
-                      text: Show credential
-                      url: https://www.hackerrank.com/certificates/259fe6992f88
-            - item:
-                title: Rest API (Intermediate) Certificate
-                subtitles:
-                  - text: HackerRank · 2023
-                    style: light
-                content:
-                  - link:
-                      text: Show credential
-                      url: https://www.hackerrank.com/certificates/8820f37fed23
+            - list:
+              - content:
+                - text: Data Structures & Algorithms
+                  style: fw-bold my-2
+              - content:
+                - text: Formal Languages & Compilers
+                  style: fw-bold my-2
+              - content:
+                - text: Functional Programming (λ-Calculus)
+                  style: fw-bold my-2
+              - content:
+                - text: Object-Oriented Programming
+                  style: fw-bold my-2
+              - content:
+                - text: Model–View–Controller Pattern
+                  style: fw-bold my-2
+              - content:
+                - text: Object–Relational Mapping Technique
+                  style: fw-bold my-2
+              - content:
+                - text: Git
+                  style: fw-bold my-2
+              - content:
+                - text: Network Sockets, TCP, UDP
+                  style: fw-bold my-2
+              - content:
+                - text: HTTP
+                  style: fw-bold my-2
+              - content:
+                - text: REST APIs
+                  style: fw-bold my-2
+              - content:
+                - text: Protobuf
+                  style: fw-bold my-2
+              - content:
+                - text: gRPC
+                  style: fw-bold my-2
     - width: 6
       content:
       - section:
@@ -581,68 +591,70 @@ rows:
           style: yellow
           title: Books
           content:
-            - list:
-              - content:
-                - link:
-                    style: km-inherit
-                    text: "<b>Clean Code: A Handbook of Agile Software Craftsmanship</b><br><em>Robert C. Martin</em>"
-                    url: https://www.goodreads.com/book/show/3735293-clean-code
-              - content:
-                - link:
-                    style: km-inherit
-                    text: "<b>Logical Foundations</b><br><em>Benjamin C. Pierce, et al.</em>"
-                    url: https://softwarefoundations.cis.upenn.edu/lf-current/index.html
-              - content:
-                  - link:
-                      style: km-inherit
-                      text: "<b>The Go Programming Language</b><br><em>Alan A.A. Donovan, Brian W. Kernighan</em>"
-                      url: https://www.goodreads.com/book/show/25080953-the-go-programming-language
-              - content:
-                  - link:
-                      style: km-inherit
-                      text: "<b>Refactoring: Improving the Design of Existing Code</b><br><em>Martin Fowler, et al.</em>"
-                      url: https://www.goodreads.com/book/show/18624706-refactoring
+            - item:
+                title: Read
+                content:
+                  - list:
+                    - content:
+                      - link:
+                          style: km-inherit
+                          text: "<b>Clean Code: A Handbook of Agile Software Craftsmanship</b><br><em>Robert C. Martin</em>"
+                          url: https://www.goodreads.com/book/show/3735293-clean-code
+                    - content:
+                      - link:
+                          style: km-inherit
+                          text: "<b>Logical Foundations</b><br><em>Benjamin C. Pierce, et al.</em>"
+                          url: https://softwarefoundations.cis.upenn.edu/lf-current/index.html
+            - item:
+                title: Reading
+                content:
+                  - list:
+                    - content:
+                        - link:
+                            style: km-inherit
+                            text: "<b>The Go Programming Language</b><br><em>Alan A.A. Donovan, Brian W. Kernighan</em>"
+                            url: https://www.goodreads.com/book/show/25080953-the-go-programming-language
+                    - content:
+                        - link:
+                            style: km-inherit
+                            text: "<b>Refactoring: Improving the Design of Existing Code</b><br><em>Martin Fowler, et al.</em>"
+                            url: https://www.goodreads.com/book/show/18624706-refactoring
+                    - content:
+                        - link:
+                            style: km-inherit
+                            text: "<b>Site Reliability Engineering: How Google Runs Production Systems</b><br><em>Betsy Beyer, et al.</em>"
+                            url: https://www.goodreads.com/book/show/27968891-site-reliability-engineering
       - section:
-          style: blue
-          title: Understandings
+          style: green
+          title: Certificates
           content:
-            - list:
-              - content:
-                - text: Data Structures & Algorithms
-                  style: fw-bold my-2
-              - content:
-                - text: Formal Languages & Compilers
-                  style: fw-bold my-2
-              - content:
-                - text: Functional Programming (λ-Calculus)
-                  style: fw-bold my-2
-              - content:
-                - text: Object-Oriented Programming
-                  style: fw-bold my-2
-              - content:
-                - text: Model–View–Controller Pattern
-                  style: fw-bold my-2
-              - content:
-                - text: Object–Relational Mapping Technique
-                  style: fw-bold my-2
-              - content:
-                - text: Git
-                  style: fw-bold my-2
-              - content:
-                - text: Network Sockets, TCP, UDP
-                  style: fw-bold my-2
-              - content:
-                - text: HTTP
-                  style: fw-bold my-2
-              - content:
-                - text: REST APIs
-                  style: fw-bold my-2
-              - content:
-                - text: Protobuf
-                  style: fw-bold my-2
-              - content:
-                - text: gRPC
-                  style: fw-bold my-2
+            - item:
+                title: Go (Intermediate) Certificate
+                subtitles:
+                  - text: HackerRank · 2023
+                    style: light
+                content:
+                  - link:
+                      text: Show credential
+                      url: https://www.hackerrank.com/certificates/a414c8cc9c1e
+            - item:
+                title: SQL (Advanced) Certificate
+                subtitles:
+                  - text: HackerRank · 2023
+                    style: light
+                content:
+                  - link:
+                      text: Show credential
+                      url: https://www.hackerrank.com/certificates/259fe6992f88
+            - item:
+                title: Rest API (Intermediate) Certificate
+                subtitles:
+                  - text: HackerRank · 2023
+                    style: light
+                content:
+                  - link:
+                      text: Show credential
+                      url: https://www.hackerrank.com/certificates/8820f37fed23
   - style: km-screen-only
     columns:
     - width: 12
