@@ -150,7 +150,7 @@ contact:
 
   - image: assets/contact/resume.png
     text: Download Résumé
-    url: https://k.mirzavaziri.com/assets/KamyarMirzavaziriResume2023Oct.pdf
+    url: https://k.mirzavaziri.com/assets/KamyarMirzavaziriResume2023Dec.pdf
 
 rows:
   - columns:
@@ -579,7 +579,7 @@ rows:
                         amount: <1Y
       - section:
           style: yellow
-          title: Books
+          title: Reads
           content:
             - list:
               - content:
