@@ -71,9 +71,9 @@ tools:
     text: PHP
     url: https://en.wikipedia.org/wiki/PHP
 
-  - image: assets/tools/rabbitmq.png
-    text: RabbitMQ
-    url: https://en.wikipedia.org/wiki/RabbitMQ
+  - image: assets/tools/kafka.png
+    text: Kafka
+    url: https://en.wikipedia.org/wiki/Apache_Kafka
 
   - image: assets/tools/redis.png
     text: Redis
@@ -247,6 +247,9 @@ rows:
                     - badge:
                         style: red
                         text: RabbitMQ
+                    - badge:
+                        style: red
+                        text: Kafka
                     - list:
                       - content:
                         - text: "Took a major role in redesigning the Submit micro-service from Python to Go and REST to gRPC, achieved the following."
@@ -513,6 +516,8 @@ rows:
                         - name: MongoDB
                           amount: 1Y
                         - name: RabbitMQ
+                          amount: 1Y
+                        - name: Kafka
                           amount: 1Y
             - item:
                 title: Languages & Frameworks
