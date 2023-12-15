@@ -15,6 +15,14 @@ tools:
     text: WordPress
     url: https://en.wikipedia.org/wiki/WordPress
 
+  - image: assets/tools/grafana.png
+    text: Grafana
+    url: https://en.wikipedia.org/wiki/Grafana
+
+  - image: assets/tools/prometheus.png
+    text: Prometheus
+    url: https://en.wikipedia.org/wiki/Prometheus_(software)
+
   - image: assets/tools/bootstrap.png
     text: Bootstrap
     url: https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)
@@ -70,6 +78,10 @@ tools:
   - image: assets/tools/php.png
     text: PHP
     url: https://en.wikipedia.org/wiki/PHP
+
+  - image: assets/tools/rabbitmq.png
+    text: RabbitMQ
+    url: https://en.wikipedia.org/wiki/RabbitMQ
 
   - image: assets/tools/kafka.png
     text: Kafka
@@ -250,6 +262,12 @@ rows:
                     - badge:
                         style: red
                         text: Kafka
+                    - badge:
+                        style: purple
+                        text: Prometheus
+                    - badge:
+                        style: purple
+                        text: Grafana
                     - list:
                       - content:
                         - text: "Took a major role in redesigning the Submit micro-service from Python to Go and REST to gRPC, achieved the following."
@@ -307,6 +325,12 @@ rows:
                     - badge:
                         style: yellow
                         text: Sass
+                    - badge:
+                        style: purple
+                        text: Prometheus
+                    - badge:
+                        style: purple
+                        text: Grafana
                     - list:
                       - content:
                         - text: "Led 3 engineers under Agile framework; together created a product now hosting 2000+ users and offering 60+ courses and workshops."
@@ -563,6 +587,18 @@ rows:
                         amount: 1Y
                       - name: Bootstrap
                         amount: 9Y
+            - item:
+                title: Other Tools
+                uppercase_title: true
+                style: km-text-purple
+                content:
+                  - skills:
+                      color: purple
+                      content:
+                      - name: Prometheus
+                        amount: 1Y
+                      - name: Grafana
+                        amount: 1Y
             - item:
                 title: Minor Encounters
                 uppercase_title: true

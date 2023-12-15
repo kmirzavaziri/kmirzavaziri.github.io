@@ -14,7 +14,7 @@
     .km-tool {
         filter: none !important;
         opacity: 1 !important;
-        width: 28px !important;
+        width: 25px !important;
         margin: 3px !important;
     }
 
@@ -614,6 +614,15 @@ my-4 {
     color: #DB4437;
 }
 
+.km-badge.km-badge-purple {
+    background-color: #6e27b0;
+    border: solid 2px #6e27b0;
+}
+
+.km-badge.km-badge-purple:hover {
+    color: #6e27b0;
+}
+
 .km-badge.km-badge-gray {
     background-color: #373737;
     border: solid 2px #373737;
@@ -637,6 +646,10 @@ my-4 {
 
 .km-text-red {
     color: #DB4437;
+}
+
+.km-text-purple {
+    color: #6e27b0;
 }
 
 .km-easter-toggle-wrapper {
