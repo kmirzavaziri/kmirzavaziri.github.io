@@ -124,9 +124,13 @@ tools:
     url: https://en.wikipedia.org/wiki/Ubuntu
 
 contact:
+  - image: assets/contact/location.png
+    text: "Dubai, United Arab Emirates"
+    url: "https://en.wikipedia.org/wiki/Dubai"
+
   - image: assets/contact/phone.png
-    text: "+989392501338"
-    url: "tel:+989392501338"
+    text: "+1 (541) 321 0338"
+    url: "tel:+15413210338"
 
   - image: assets/contact/email.png
     text: "kmirzavaziri@gmail.com"
@@ -162,7 +166,7 @@ contact:
 
   - image: assets/contact/resume.png
     text: Download Résumé
-    url: https://k.mirzavaziri.com/assets/KamyarMirzavaziriResume2023Dec.pdf
+    url: https://k.mirzavaziri.com/assets/KamyarMirzavaziriResume2024Jan.pdf
 
 rows:
   - columns:
@@ -174,7 +178,7 @@ rows:
             content:
               - list:
                 - content:
-                  - text: "2+ years experience in enterprise companies, utilizing 15+ tools, provided a valuable insights into aspects of software engineering."
+                  - text: "7+ years experience in software engineering, utilizing 15+ tools, provided a valuable insights into aspects of software engineering."
                 - content:
                   - text: "The portfolio spanning small startup projects to highly-loaded enterprise apps, helps the development of full-stack apps and improvement and scale of existing ones."
         - contact_or_terminal:
@@ -224,8 +228,8 @@ rows:
             content:
               - item:
                   image: "assets/work/divar.png"
-                  url: https://divar.ir/
-                  title: "Mid-Level Software Engineer <span class='fw-normal'>@ Divar</span>"
+                  url: "https://careers.divar.ir/en/about-divar"
+                  title: "Software Engineer <span class='fw-normal'>@ Divar</span>"
                   uppercase_title: true
                   cotitle: "2022 - Present"
                   subtitles:
@@ -291,7 +295,7 @@ rows:
               - item:
                   image: "assets/work/avistopia.png"
                   url: https://en.avistopia.com/
-                  title: "Mid-Level Software Engineer <span class='fw-normal'>@ Avistopia</span>"
+                  title: "Founder & Software Engineer <span class='fw-normal'>@ Avistopia</span>"
                   uppercase_title: true
                   cotitle: "2021 - 2022"
                   subtitles:
@@ -333,6 +337,8 @@ rows:
                         text: Grafana
                     - list:
                       - content:
+                        - text: "Launched a startup with near $50K revenue in the first year, and growing from then."
+                      - content:
                         - text: "Led 3 engineers under Agile framework; together created a product now hosting 2000+ users and offering 60+ courses and workshops."
                       - content:
                         - text: "Developed a complex registration service with features such as team registration, and installment payment plans, which attracted over 400 users in the initial days."
@@ -342,8 +348,8 @@ rows:
                         - text: "Led the development of XUA, a PHP ORM facilitating business complexities such as foreign keys and many-to-many relations, accelerated development by approximately 20%."
               - item:
                   image: "assets/work/digikala.png"
-                  url: https://www.digikala.com/
-                  title: "Junior Software Engineer <span class='fw-normal'>@ DigiKala</span>"
+                  url: "https://about.digikala.com/en/"
+                  title: "Software Engineer <span class='fw-normal'>@ DigiKala</span>"
                   uppercase_title: true
                   cotitle: "2020 - 2021"
                   subtitles:
@@ -428,7 +434,7 @@ rows:
                           - text: by <a href="https://en.wikipedia.org/wiki/Siamak_Yassemi">Siamak Yassemi</a>
             - item:
                 title: Technical Manager
-                cotitle: 2015 - 2021
+                cotitle: 2017 - 2021
                 subtitles:
                   - text: Arithland Educational Center
                     style: light

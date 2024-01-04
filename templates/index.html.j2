@@ -90,7 +90,7 @@
 <div class="km-item my-2">
     <div class="km-item-header">
         {% if "image" in item.item %}
-        <a href="{{ item.item.url }}"><img class="km-logo {{ item.item.image_style }}" src="{{ item.item.image }}"></a>
+        <a href="{{ item.item.url }}" target="_blank"><img class="km-logo {{ item.item.image_style }}" src="{{ item.item.image }}"></a>
         {% endif %}
         {% if "easter" in item.item and item.item.easter == "toggle" %}
         	<a href="{{ item.item.url }}">
