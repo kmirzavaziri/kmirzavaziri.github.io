@@ -254,7 +254,7 @@ sections:
           uppercase_title: true
           cotitle: "2022 - Present"
           subtitles:
-            - text: "The biggest Iranian classified ads platform, alternative for eBay in Iran."
+            - text: "The biggest Iranian classified ads platform, with over 60 million active users, alternative for eBay in Iran."
               style: light
           content:
             - badge:
@@ -376,7 +376,7 @@ sections:
           uppercase_title: true
           cotitle: "2020 - 2021"
           subtitles:
-            - text: "The biggest E-commerce in Mena Region, alternative for Amazon in Iran."
+            - text: "The biggest E-commerce in Mena Region with over 41 million active users, alternative for Amazon in Iran."
               style: light
           content:
             - badge:
