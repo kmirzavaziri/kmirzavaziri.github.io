@@ -1,0 +1,225 @@
+{% macro render_layout(layout) -%}
+    {% for section_name in layout %}
+        {% set section = info.sections[section_name] %}
+        <section>
+            <h2>{{ section.title }}</h2>
+            {% for inner_item in section.content %} {{ render_item(inner_item) }} {% endfor %}
+        </section>
+    {% endfor %}
+{%- endmacro %}
+
+{% macro render_item(item) -%}
+    {% if "list" in item %}
+        <ul>
+            {% for li in item.list %}
+                <li>{% for inner_item in li.content %}{{ render_item(inner_item) }}{% endfor %}</li>
+            {% endfor %}
+        </ul>
+    {% elif "text" in item %}
+        <p>
+            {% if item.text is string %}
+                {{ item.text }}
+            {% else %}
+                {% for inner_item in item.text.content %}{{ render_item(inner_item) }}{% endfor %}
+            {% endif %}
+        </p>
+    {% elif "item" in item %}
+        <h3>
+            {% if item.item.include_url_in_resume %}
+                <a href="{{ item.item.url }}">{{ item.item.title }}</a>
+            {% else %}
+                {{ item.item.title }}
+            {% endif %}
+
+            {% if "cotitle" in item.item %}
+                <span class="font-weight-normal"> · {{ item.item.cotitle }}</span>
+            {% endif %}
+        </h3>
+
+        <p> {{ item.item.subtitles|map(attribute="text")|join(" · ") }} </p>
+
+        {% for inner_item in item.item.content %} {{ render_item(inner_item) }} {% endfor %}
+    {% elif "badge" in item %}
+        <span class="km-badge km-badge-{{ item.badge.style }}">{{ item.badge.text }}</span>
+    {% elif "link" in item %}
+        <a href="{{ item.link.url }}" target="_blank">{{ item.link.url }}</a>
+    {% elif "skills" in item %}
+        {% for skill in item.skills.content %}
+            <span class="km-badge km-badge-{{ item.skills.color }}">
+			{{ skill.name }}
+			<span class="font-weight-normal">({{ skill.amount }})</span>
+			</span>
+        {% endfor %}
+    {% else %}
+        {{ item }}
+    {% endif %}
+{%- endmacro %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ info.personal.first_name }} {{ info.personal.last_name }}</title>
+    <meta
+            name="description"
+            content="{{ info.personal.first_name }} {{ info.personal.last_name }} | {{ info.personal.role }}"
+    >
+    <meta name="author" content="{{ info.personal.first_name }} {{ info.personal.last_name }}">
+    <style>
+        @page {
+            margin: .3in;
+            size: a4;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            font-size: 11pt;
+        }
+
+        h1 {
+            font-size: 14pt;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 4px 0;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 4px 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            margin: 5px 0;
+        }
+
+        a {
+            color: #0098ff;
+        }
+
+        address {
+            font-style: normal;
+            line-height: 1.5;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .gap-10 {
+            gap: 10px;
+        }
+
+        .d-inline-block {
+            display: inline-block;
+        }
+
+        .box {
+            background: #e4e4e4;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .km-badge {
+            display: inline-block;
+            margin: 3px 0;
+            border-radius: 20px;
+            padding: 0 3px;
+            color: #FFFFFF;
+            font-size: 8pt;
+            font-weight: 600;
+        }
+
+        .km-badge.km-badge-green {
+            background-color: #0F9D58;
+            border: solid 2px #0F9D58;
+        }
+
+        .km-badge.km-badge-blue {
+            background-color: #4285F4;
+            border: solid 2px #4285F4;
+        }
+
+        .km-badge.km-badge-yellow {
+            background-color: #F4B400;
+            border: solid 2px #F4B400;
+        }
+
+        .km-badge.km-badge-red {
+            background-color: #DB4437;
+            border: solid 2px #DB4437;
+        }
+
+        .km-badge.km-badge-purple {
+            background-color: #6e27b0;
+            border: solid 2px #6e27b0;
+        }
+
+        .km-badge.km-badge-gray {
+            background-color: #373737;
+            border: solid 2px #373737;
+        }
+
+        .font-weight-normal {
+            font-weight: normal;
+        }
+
+        .profile-picture {
+            height: 60px;
+            width: 60px;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <div class="d-flex align-items-center gap-10">
+        <img
+                class="d-inline-block profile-picture"
+                src="avatar-rounded.png"
+                alt="{{ info.personal.first_name }} {{ info.personal.last_name }} Profile Picture"
+        >
+        <div class="d-inline-block">
+            <h1>{{ info.personal.first_name }} {{ info.personal.last_name }}</h1>
+            <h2> {{ info.personal.role }} </h2>
+        </div>
+    </div>
+    <address class="box">
+        {% for contact in info.contact %}
+            {% if contact.include_in_resume %}
+                {{ contact.title }}:
+                {% if contact.url %}
+                    <a href="{{ contact.url }}" target="_blank">{{ contact.full_text or contact.text }}</a>
+                {% else %}
+                    {{ contact.text }}
+                {% endif %}
+                <br>
+            {% endif %}
+        {% endfor %}
+        Languages: English (Can speak fluently), Persian (Native speaker)
+    </address>
+</header>
+
+<main>
+    {{ render_layout(info.layout.resume) }}
+</main>
+
+</body>
+
+</html>

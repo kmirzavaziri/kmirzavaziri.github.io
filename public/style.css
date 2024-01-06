@@ -125,7 +125,7 @@ h4 {
 
 p,
 li {
-    margin: .3rem 0;
+    margin: .1rem 0;
     text-align: justify;
     line-height: 1.5rem;
 }
@@ -454,7 +454,7 @@ my-4 {
 
 .km-section .km-section-header {
     width: 100%;
-    height: 88px;
+    height: 60px;
     font-size: 29pt;
     text-transform: uppercase;
     display: flex;
@@ -551,7 +551,7 @@ my-4 {
 
 .km-badge {
     display: inline-block;
-    margin: 6px 0;
+    margin: 3px 0;
     border-radius: 20px;
     padding: 0 10px;
     color: #FFFFFF;

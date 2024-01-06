@@ -1,143 +1,173 @@
-{% macro render_row(row) -%}
-<div class="row {{ row.style }}">
-    {% for column in row.columns %}{{ render_column(column) }}{% endfor %}
-</div>
-{%- endmacro %}
-
-{% macro render_column(column) -%}
-<div class="col-lg-{{ column.width }} col-print-{{ column.width }} {{ column.style }}">
-    {% for item in column.content %}{{ render_item(item) }}{% endfor %}
-</div>
+{% macro render_layout(layout) -%}
+    {% for row in layout %}
+        {% if "cols" in row %}
+            <div class="row {{ row.style }}">
+                {% for col in row.cols %}
+                    <div class="col-lg-{{ col.width }} col-print-{{ col.width }} {{ col.style }}">
+                        {% for section_name in col.sections %}
+                            {% if section_name == "contact_or_terminal" %}
+                                <section class="km-section km-section-blue mt-3 km-print-only">
+                                    <h3 class="km-section-header">Contact</h3>
+                                    <div class="km-section-body">
+                                        {% for item in info.contact %}
+                                            <div class="km-contact-item">
+                                                <img src="{{ item.image }}">
+                                                <a href="{{ item.url }}" target="_blank">{{ item.text }}</a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </section>
+                                <section class="km-section km-section-black mt-3 km-screen-only">
+                                    <h3 class="km-section-header">Terminal</h3>
+                                    <div class="km-section-body">
+                                        <div id="km-terminal">
+                                            <div id="km-terminal-history">
+                                                <div class="km-terminal-history-item">type help to see the list of
+                                                    available commands
+                                                </div>
+                                            </div>
+                                            <div id="km-terminal-current-line">
+				<span class="km-terminal-context" contentEditable="false">
+					<span class="km-terminal-loc">guest@km-website</span>:<span id="km-terminal-cwd"
+                                                                                class="km-terminal-cwd">/</span>
+				</span>
+                                                <span id="km-terminal-user-input" contentEditable>&nbsp;</span>
+                                                <div id="km-terminal-suggestions"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            {% else %}
+                                {% set section = info.sections[section_name] %}
+                                <section class="km-section km-section-{{ section.style }} mt-3">
+                                    <h3 class="km-section-header">{{ section.title }}</h3>
+                                    <div class="km-section-body">
+                                        {% for inner_item in section.content %}
+                                            {{ render_item(inner_item) }} {% endfor %}
+                                    </div>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="km-page-break"></div>
+        {% elif "fav_tools" in row %}
+            <div class="align-items-center my-4 km-screen-only d-none d-xl-flex">
+                <div class="km-tools-title">Favorite Tools</div>
+                <div class="km-tools-ln flex-grow-1"></div>
+                {% for tool in info.tools %}
+                    <a href="{{ tool.url }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                       data-bs-title="{{ tool.text }}"><img src="{{ tool.image }}" class="km-tool"></a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endfor %}
 {%- endmacro %}
 
 {% macro render_item(item) -%}
-{% if "section" in item %}
-<section class="km-section km-section-{{ item.section.style }} mt-3">
-    <h3 class="km-section-header">{{ item.section.title }}</h3>
-    <div class="km-section-body">
-        {% for inner_item in item.section.content %} {{ render_item(inner_item) }} {% endfor %}
-    </div>
-</section>
-{% elif "row" in item %}
-<div class="row">
-    {% for column in item.row.columns %}{{ render_column(column) }}{% endfor %}
-</div>
-{% elif "contact_or_terminal" in item %}
-<section class="km-section km-section-blue mt-3 km-print-only">
-    <h3 class="km-section-header">Contact</h3>
-    <div class="km-section-body">
-        {% for item in info.contact %}
-        <div class="km-contact-item">
-            <img src="{{ item.image }}">
-            <a href="{{ item.url }}" target="_blank">{{ item.text }}</a>
+    {% if "row" in item %}
+        <div class="row">
+            {% for column in item.row.columns %}
+                <div class="col-lg-{{ column.width }} col-print-{{ column.width }} {{ column.style }}">
+                    {% for inner_item in column.content %}{{ render_item(inner_item) }}{% endfor %}
+                </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-</section>
-<section class="km-section km-section-black mt-3 km-screen-only">
-    <h3 class="km-section-header">Terminal</h3>
-    <div class="km-section-body">
-		<div id="km-terminal">
-			<div id="km-terminal-history">
-				<div class="km-terminal-history-item">type help to see the list of available commands</div>
-			</div>
-			<div id="km-terminal-current-line">
-				<span class="km-terminal-context" contentEditable="false">
-					<span class="km-terminal-loc">guest@km-website</span>:<span id="km-terminal-cwd" class="km-terminal-cwd">/</span>
-				</span>
-				<span id="km-terminal-user-input" contentEditable>&nbsp;</span>
-				<div id="km-terminal-suggestions"></div>
-			</div>
-		</div>
-    </div>
-</section>
-{% elif "list" in item %}
-<ul>
-    {% for li in item.list %}
-    <li>{% for inner_item in li.content %}{{ render_item(inner_item) }}{% endfor %}</li>
-    {% endfor %}
-</ul>
-{% elif "img" in item %}
-<img class="{{ item.img.style }}" src="{{ item.img.src }}" />
-{% elif "skills" in item %}
-<table class="km-skill-table">
-	<tbody>
-		{% for skill in item.skills.content %}
-			<span class="km-badge km-badge-{{ item.skills.color }} mx-1 my-1">
+    {% elif "list" in item %}
+        <ul>
+            {% for li in item.list %}
+                <li>{% for inner_item in li.content %}{{ render_item(inner_item) }}{% endfor %}</li>
+            {% endfor %}
+        </ul>
+    {% elif "img" in item %}
+        <img class="{{ item.img.style }}" src="{{ item.img.src }}"/>
+    {% elif "skills" in item %}
+        <table class="km-skill-table">
+            <tbody>
+            {% for skill in item.skills.content %}
+                <span class="km-badge km-badge-{{ item.skills.color }} mx-1 my-1">
 			{{ skill.name }}
 			<span class="km-skill-amount">({{ skill.amount }})</span>
 			</span>
-		{% endfor %}
-	</tbody>
-</table>
-{% elif "text" in item %}
-<p class="{{ item.style }}">
-    {% if item.text is string %}
-    {{ item.text }}
-    {% else %}
-    {% for inner_item in item.text.content %}{{ render_item(inner_item) }}{% endfor %}
-    {% endif %}
-</p>
-{% elif "link" in item %}
-<a class="{{ item.link.style }}" href="{{ item.link.url }}" target="_blank">{{ item.link.text }}</a>
-{% elif "br" in item %}
-<br>
-{% elif "badge" in item %}
-<span class="km-badge km-badge-{{ item.badge.style }}">{{ item.badge.text }}</span>
-{% elif "h3" in item %}
-<h3 class="km-h3">{{ item.h3 }}</h3>
-{% elif "item" in item %}
-<div class="km-item my-2">
-    <div class="km-item-header">
-        {% if "image" in item.item %}
-        <a href="{{ item.item.url }}" target="_blank"><img class="km-logo {{ item.item.image_style }}" src="{{ item.item.image }}"></a>
-        {% endif %}
-        {% if "easter" in item.item and item.item.easter == "toggle" %}
-        	<a href="{{ item.item.url }}">
-        	<div class="km-easter-toggle-wrapper">
-        		<div class="km-easter-toggle-circle"></div>
-        	</div>
-        	</a>
-        {% endif %}
-        {% if "easter" in item.item and item.item.easter == "squidward" %}
-        	<a href="{{ item.item.url }}"><div class="km-easter-squidward"></div></a>
-        {% endif %}
-        {% if "easter" in item.item and item.item.easter == "programming" %}
-        	<a href="{{ item.item.url }}" class="km-easter-programming-anchor">
-        	<div class="km-easter-programming-wrapper">
-	        	<span class="km-easter-programming-lt">&lt;</span>
-	        	<span class="km-easter-programming-slash">/</span>
-	        	<span class="km-easter-programming-gt">&gt;</span>
-        	</div>
-        	</a>
-        {% endif %}
-        {% if "easter" in item.item and item.item.easter == "bike" %}
-        	<a href="{{ item.item.url }}">
-        	<div class="km-easter-bike">
-	        	<img class="km-easter-bike-wheel km-easter-bike-wheel-l" src="assets/passions/bicycle-wheel.png">
-	        	<img class="km-easter-bike-wheel km-easter-bike-wheel-r" src="assets/passions/bicycle-wheel.png">
-        	</div>
-        	</a>
-        {% endif %}
-        <div class="flex-grow-1">
-            <div class="km-item-header-title">
-                <h4 class="{% if item.item.uppercase_title %}text-uppercase{% endif %} {{ item.item.style }}">{{ item.item.title }}</h4>
-                {% if "cotitle" in item.item %}
-                <span class="km-subtitle">{{ item.item.cotitle }}</span>
-                {% endif %}
-            </div>
-            {% for subtitle in item.item.subtitles %}
-            {% set cls = "km-subtitle" %}
-            {% if "style" in subtitle %}
-            {% set cls = "km-subtitle-" + subtitle.style %}
-            {% endif %}
-            <span class="{{ cls }}"> {{ subtitle.text }} </span>
             {% endfor %}
+            </tbody>
+        </table>
+    {% elif "text" in item %}
+        <p class="{{ item.style }}">
+            {% if item.text is string %}
+                {{ item.text }}
+            {% else %}
+                {% for inner_item in item.text.content %}{{ render_item(inner_item) }}{% endfor %}
+            {% endif %}
+        </p>
+    {% elif "link" in item %}
+        <a class="{{ item.link.style }}" href="{{ item.link.url }}" target="_blank">{{ item.link.text }}</a>
+    {% elif "br" in item %}
+        <br>
+    {% elif "badge" in item %}
+        <span class="km-badge km-badge-{{ item.badge.style }}">{{ item.badge.text }}</span>
+    {% elif "h3" in item %}
+        <h3 class="km-h3">{{ item.h3 }}</h3>
+    {% elif "item" in item %}
+        <div class="km-item my-2">
+            <div class="km-item-header">
+                {% if "image" in item.item %}
+                    <a href="{{ item.item.url }}" target="_blank"><img class="km-logo {{ item.item.image_style }}"
+                                                                       src="{{ item.item.image }}"></a>
+                {% endif %}
+                {% if "easter" in item.item and item.item.easter == "toggle" %}
+                    <a href="{{ item.item.url }}">
+                        <div class="km-easter-toggle-wrapper">
+                            <div class="km-easter-toggle-circle"></div>
+                        </div>
+                    </a>
+                {% endif %}
+                {% if "easter" in item.item and item.item.easter == "squidward" %}
+                    <a href="{{ item.item.url }}">
+                        <div class="km-easter-squidward"></div>
+                    </a>
+                {% endif %}
+                {% if "easter" in item.item and item.item.easter == "programming" %}
+                    <a href="{{ item.item.url }}" class="km-easter-programming-anchor">
+                        <div class="km-easter-programming-wrapper">
+                            <span class="km-easter-programming-lt">&lt;</span>
+                            <span class="km-easter-programming-slash">/</span>
+                            <span class="km-easter-programming-gt">&gt;</span>
+                        </div>
+                    </a>
+                {% endif %}
+                {% if "easter" in item.item and item.item.easter == "bike" %}
+                    <a href="{{ item.item.url }}">
+                        <div class="km-easter-bike">
+                            <img class="km-easter-bike-wheel km-easter-bike-wheel-l"
+                                 src="assets/passions/bicycle-wheel.png">
+                            <img class="km-easter-bike-wheel km-easter-bike-wheel-r"
+                                 src="assets/passions/bicycle-wheel.png">
+                        </div>
+                    </a>
+                {% endif %}
+                <div class="flex-grow-1">
+                    <div class="km-item-header-title">
+                        <h4 class="{% if item.item.uppercase_title %}text-uppercase{% endif %} {{ item.item.style }}">{{ item.item.title }}</h4>
+                        {% if "cotitle" in item.item %}
+                            <span class="km-subtitle">{{ item.item.cotitle }}</span>
+                        {% endif %}
+                    </div>
+                    {% for subtitle in item.item.subtitles %}
+                        {% set cls = "km-subtitle" %}
+                        {% if "style" in subtitle %}
+                            {% set cls = "km-subtitle-" + subtitle.style %}
+                        {% endif %}
+                        <span class="{{ cls }}"> {{ subtitle.text }} </span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% for inner_item in item.item.content %} {{ render_item(inner_item) }} {% endfor %}
         </div>
-    </div>
-    {% for inner_item in item.item.content %} {{ render_item(inner_item) }} {% endfor %}
-</div>
-{% endif %}
+    {% else %}
+        {{ item }}
+    {% endif %}
 {%- endmacro %}
 
 <!DOCTYPE html>
@@ -148,12 +178,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -164,69 +194,61 @@
     <meta name="msapplication-TileColor" content="#d6d6d6">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Kamyar Mirzavaziri</title>
+    <title>{{ info.personal.first_name }} {{ info.personal.last_name }}</title>
 </head>
 
 <body>
-    <div class="container my-3">
-        <div class="row">
-            <div class="col-4">
-                <div id="km-avatar"></div>
-            </div>
-            <div class="col-8 text-center d-flex justify-content-center align-items-center">
-                <div id="km-header-title">
-                    <h1 id="km-header-fname">Kamyar</h1>
-                    <span id="km-header-lname" class="d-block">Mirzavaziri</span>
-                    <span id="km-header-role">Software Engineer</span>
-                </div>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-4">
+            <div id="km-avatar"></div>
+        </div>
+        <div class="col-8 text-center d-flex justify-content-center align-items-center">
+            <div id="km-header-title">
+                <h1 id="km-header-fname">{{ info.personal.first_name }}</h1>
+                <span id="km-header-lname" class="d-block">{{ info.personal.last_name }}</span>
+                <span id="km-header-role">{{ info.personal.role }}</span>
             </div>
         </div>
+    </div>
 
-        <div class="d-flex align-items-center my-4 km-screen-only">
-            {% for item in info.contact %}
-            <a href="{{ item.url }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                data-bs-title="{{ item.text }}" target="_blank">
-                <img src="{{ item.image }}" class="km-tool">
+    <div class="d-flex align-items-center my-4 km-screen-only">
+        {% for contact in info.contact %}
+            <a
+                    href="{{ contact.url or "#" }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    data-bs-title="{{ contact.text }}"
+                    {% if contact.url %}
+                    target="_blank"
+                    {% endif %}
+            >
+                <img src="{{ contact.image }}" class="km-tool">
             </a>
-            {% endfor %}
-            <div class="km-tools-ln flex-grow-1"></div>
-            <div class="km-tools-title">Keep in touch!</div>
-        </div>
-
-
-        <div class="d-flex align-items-center my-4 km-print-only">
-            <div class="km-tools-title">Favorite Tools</div>
-            <div class="km-tools-ln flex-grow-1"></div>
-            {% for tool in info.tools %}
-            <a href="{{ tool.url }}" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                data-bs-title="{{ tool.text }}"><img src="{{ tool.image }}" class="km-tool"></a>
-            {% endfor %}
-        </div>
-
-        {% for row in info.rows %}
-        	{% if "columns" in row %}
-        	{{ render_row(row) }}
-			<div class="km-page-break"></div>
-        	{% elif "fav_tools" in row %}
-				<div class="align-items-center my-4 km-screen-only d-none d-xl-flex">
-					<div class="km-tools-title">Favorite Tools</div>
-					<div class="km-tools-ln flex-grow-1"></div>
-					{% for tool in info.tools %}
-					<a href="{{ tool.url }}" data-bs-toggle="tooltip" data-bs-placement="top"
-						data-bs-title="{{ tool.text }}"><img src="{{ tool.image }}" class="km-tool"></a>
-					{% endfor %}
-				</div>
-        	{% endif %}
         {% endfor %}
-	</div>
+        <div class="km-tools-ln flex-grow-1"></div>
+        <div class="km-tools-title">Keep in touch!</div>
+    </div>
 
-	<footer class="km-screen-only bg-dark text-center text-white text-center p-3">
-		© 2023 - Made with 🧠 by <a class="text-white" href="https://k.mirzavaziri.com">Kamyar Mirzavaziri</a>
-	</footer>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-		crossorigin="anonymous"></script>
-	<script src="script.js"></script>
+    <div class="d-flex align-items-center my-4 km-print-only">
+        <div class="km-tools-title">Favorite Tools</div>
+        <div class="km-tools-ln flex-grow-1"></div>
+        {% for tool in info.tools %}
+            <a href="{{ tool.url }}" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+               data-bs-title="{{ tool.text }}"><img src="{{ tool.image }}" class="km-tool"></a>
+        {% endfor %}
+    </div>
+
+    {{ render_layout(info.layout.website) }}
+</div>
+
+<footer class="km-screen-only bg-dark text-center text-white text-center p-3">
+    © 2023 - Made with 🧠 by <a class="text-white" href="https://k.mirzavaziri.com">{{ info.personal.first_name }}
+    {{ info.personal.last_name }}</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
