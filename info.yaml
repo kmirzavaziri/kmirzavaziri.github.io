@@ -254,7 +254,7 @@ sections:
           uppercase_title: true
           cotitle: "2022 - Present"
           subtitles:
-            - text: "The biggest Iranian classified ads platform, with over 60 million active users, alternative for eBay in Iran."
+            - text: "The biggest Iranian classified ads platform, with 60+ million active users, alternative for eBay in Iran."
               style: light
           content:
             - badge:
@@ -310,9 +310,18 @@ sections:
                 - content:
                     - text: "Developed an auto-migrator to convert 250+ messy forms to new structured widget forms, estimated to reduce the initial development time by 5 months."
                 - content:
-                    - text: "Optimized the Post Stats micro-service, freeing up 24 CPU cores and 120 GiB of memory, resulting in a remarkable 66% reduction in consumed resources."
+                    - text: "Optimized the Post Stats micro-service,"
+                    - list:
+                        - content:
+                            - text: "Reduced service requests from 7K to 200 per second by shifting sync calls to async via Kafka. Improved fault tolerance by storing events during system downtime, preventing data loss experienced with sync calls."
+                        - content:
+                            - text: "Freed up 24 CPU cores and 120 GiB of memory, resulting in a remarkable 66% reduction in consumed resources."
                 - content:
-                    - text: "Managed 5+ disaster, once recovered 85% of lost data, by writing a script to aggregate the data from action logs and restore data back to DB."
+                    - text: "Enhanced overall service reliability by elevating monthly Uptime from 99.84% to 99.97%, ensuring uninterrupted service availability for customers."
+                - content:
+                    - text: "Managed the PostAPI micro-service, efficiently handling 6K+ requests per second during peak times."
+                - content:
+                    - text: "Optimized CI Pipelines in a monorepo, driving a noteworthy 30% reduction in average pipeline duration, significantly elevating overall developer productivity across the organization."
       - item:
           image: "assets/work/avistopia.png"
           url: https://en.avistopia.com/
@@ -359,11 +368,11 @@ sections:
                 text: Grafana
             - list:
                 - content:
-                    - text: "Launched a startup with near $50K revenue in the first year, and growing from then."
+                    - text: "Launched a startup with $50K+ revenue in the first year, and growing from then."
                 - content:
                     - text: "Led 3 engineers under Agile framework; together created a product now hosting 2000+ users and offering 60+ courses and workshops."
                 - content:
-                    - text: "Developed a complex registration service with features such as team registration, and installment payment plans, which attracted over 400 users in the initial days."
+                    - text: "Developed a complex registration service with features such as team registration, and installment payment plans, which attracted 400+ users in the initial days."
                 - content:
                     - text: "Implemented a custom secure web-based media player using JS, to prevent paid course record leakages, resulting in a 50% reduction in such incidents."
                 - content:
@@ -376,7 +385,7 @@ sections:
           uppercase_title: true
           cotitle: "2020 - 2021"
           subtitles:
-            - text: "The biggest E-commerce in Mena Region with over 41 million active users, alternative for Amazon in Iran."
+            - text: "The biggest E-commerce in Mena Region with 41+ million active users, alternative for Amazon in Iran."
               style: light
           content:
             - badge:
