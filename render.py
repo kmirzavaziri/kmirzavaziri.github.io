@@ -12,7 +12,7 @@ def main():
     with open("public/index.html", "w") as f:
         f.write(templateEnv.get_template("index.html.j2").render(info=info))
 
-    with open("public/assets/KamyarMirzavaziriResumeMR.html", "w") as f:
+    with open("public/KamyarMirzavaziriResume.html", "w") as f:
         f.write(templateEnv.get_template("resume.html.j2").render(info=info))
 
 

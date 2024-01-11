@@ -148,7 +148,7 @@ contact:
     include_in_resume: true
 
   - title: Website
-    image: assets/avatar-rounded.png
+    image: assets/contact/website.png
     text: "k.mirzavaziri.com"
     url: "https://k.mirzavaziri.com"
     include_in_resume: true
@@ -156,7 +156,7 @@ contact:
   - title: LinkedIn
     image: assets/contact/linkedin.png
     text: "LinkedIn"
-    full_text: "https://linkedin.com/in/kmirzavaziri"
+    full_text: "linkedin.com/in/kmirzavaziri"
     url: "https://linkedin.com/in/kmirzavaziri"
     include_in_resume: true
 
@@ -188,24 +188,104 @@ contact:
 
   - title: Résumé
     image: assets/contact/resume.png
-    text: Human Readable Résumé
-    url: https://k.mirzavaziri.com/assets/KamyarMirzavaziriResumeHR.pdf
+    text: Résumé
+    url: https://k.mirzavaziri.com/assets/KamyarMirzavaziriResume.pdf
 
-  - title: Résumé
-    image: assets/contact/robot.png
-    text: Machine Readable Résumé
-    url: https://k.mirzavaziri.com/assets/KamyarMirzavaziriResumeMR.pdf
+education:
+  - degree: Master's degree
+    field: Computer Science
+    school: Sharif University of Technology
+    start: Sep 2022
+    end: Present
+  - degree: Bachelor's degree
+    field: Computer Science
+    school: University of Tehran
+    start: Sep 2017
+    end: Mar 2022
+    details:
+      - Served as Chief Scientific Officer (CSO) at the Scientific Association of Computer Science, University of Tehran during the 2019-2020 academic year, and led the Software Squad in the preceding year (2018-2019).
+      - TA for 4 courses, including Head TA managing 3 other assistants in one course.
+
+languages:
+  - language: English
+    proficiency: Can speak fluently
+  - language: Farsi
+    proficiency: Native speaker
+
+resume_skills:
+  - title: Backend (Primary)
+    skills:
+      - name: Linux (Ubuntu)
+        amount: 6Y
+      - name: Docker
+        amount: 2Y
+      - name: Kubernetes
+        amount: 1Y
+      - name: GitHub Actions
+        amount: 1Y
+      - name: Gitlab CI
+        amount: 1Y
+      - name: Nginx
+        amount: 2Y
+      - name: Ansible
+        amount: 1Y
+      - name: MySQL
+        amount: 9Y
+      - name: Redis
+        amount: 3Y
+      - name: PostgreSQL
+        amount: 1Y
+      - name: MongoDB
+        amount: 1Y
+      - name: RabbitMQ
+        amount: 1Y
+      - name: Kafka
+        amount: 1Y
+      - name: Python
+        amount: 6Y
+      - name: Django
+        amount: 1Y
+      - name: Go
+        amount: 1Y
+      - name: PHP
+        amount: 9Y
+      - name: Symfony
+        amount: 1Y
+      - name: Prometheus
+        amount: 1Y
+      - name: Grafana
+        amount: 1Y
+  - title: Other Stacks
+    skills:
+      - name: JavaScript
+        amount: 9Y
+      - name: HTML
+        amount: 9Y
+      - name: Jinja
+        amount: 1Y
+      - name: Twig
+        amount: 2Y
+      - name: CSS
+        amount: 9Y
+      - name: Sass
+        amount: 1Y
+      - name: Bootstrap
+        amount: 9Y
+      - name: WordPress
+        amount: 2Y
+      - name: UI/UX (Figma)
+        amount: 1Y
+      - name: Flutter
+        amount: <1Y
+      - name: Dart
+        amount: <1Y
 
 sections:
   about_me:
     style: green
     title: About Me
     content:
-      - list:
-          - content:
-              - text: "7+ years experience in software engineering, utilizing 15+ tools, provided a valuable insights into aspects of software engineering."
-          - content:
-              - text: "The portfolio spanning small startup projects to highly-loaded enterprise apps, helps the development of full-stack apps and improvement and scale of existing ones."
+      - text: "With over 7 years of experience in programming, I bring a versatile skill set to software engineering. My expertise spans a broad range of tools, allowing me to contribute valuable insights to the field. Over the past 3 years, I've worked in diverse professional settings, from dynamic startups to established enterprises dealing with high-scale demands, approaching near 26K requests per second. This journey underscores my adaptability to various scales and complexities, highlighting my consistent commitment to employing cutting-edge technologies and best practices to drive impactful results."
   education:
     style: yellow
     title: Education
@@ -216,7 +296,7 @@ sections:
           title: "M.Sc., Computer Science"
           subtitles:
             - text: "Sharif University of Technology"
-            - text: "2022 - Present"
+            - text: "Sep 2022 - Present"
               style: light
       - item:
           image: "assets/edu/tehran.png"
@@ -224,7 +304,7 @@ sections:
           title: "B.Sc., Computer Science"
           subtitles:
             - text: "University of Tehran"
-            - text: "2017 - 2022"
+            - text: "Sep 2017 - Mar 2022"
               style: light
   languages:
     style: red
@@ -248,13 +328,14 @@ sections:
     content:
       - item:
           image: "assets/work/divar.png"
+          include_image_in_resume: true
           url: "https://careers.divar.ir/en/about-divar"
           include_url_in_resume: true
-          title: "Software Engineer <span class='fw-normal'>@ Divar</span>"
+          title: "Software Engineer <span class='fw-normal'>at Divar</span>"
           uppercase_title: true
-          cotitle: "2022 - Present"
+          cotitle: "Nov 2022 - Present (1 yr 3 mos)"
           subtitles:
-            - text: "The biggest Iranian classified ads platform, with 60+ million active users, alternative for eBay in Iran."
+            - text: "Somehow alternative for eBay in Iran with 60+ million active users."
               style: light
           content:
             - badge:
@@ -298,17 +379,15 @@ sections:
                     - text: "Took a major role in redesigning the Submit micro-service from Python to Go and REST to gRPC, achieved the following."
                     - list:
                         - content:
-                            - text: "20% faster development."
+                            - text: "faster development,"
                         - content:
-                            - text: "99.9% up-time."
+                            - text: "99.9% up-time. (it was previously 99.84%),"
                         - content:
-                            - text: "Sub-100 ms response times (upper 99 percentile)."
+                            - text: "sub-100 ms response times (upper 99 percentile),"
                         - content:
-                            - text: "Average response size &lt; 50 KiB (down from &gt; 1 MiB)."
+                            - text: "average response size &lt; 50 KiB (down from &gt; 1 MiB),"
                         - content:
-                            - text: "A notable 10% reduction in call center load."
-                - content:
-                    - text: "Developed an auto-migrator to convert 250+ messy forms to new structured widget forms, estimated to reduce the initial development time by 5 months."
+                            - text: "a notable reduction in call center load."
                 - content:
                     - text: "Optimized the Post Stats micro-service,"
                     - list:
@@ -317,20 +396,19 @@ sections:
                         - content:
                             - text: "Freed up 24 CPU cores and 120 GiB of memory, resulting in a remarkable 66% reduction in consumed resources."
                 - content:
-                    - text: "Enhanced overall service reliability by elevating monthly Uptime from 99.84% to 99.97%, ensuring uninterrupted service availability for customers."
-                - content:
                     - text: "Managed the PostAPI micro-service, efficiently handling 6K+ requests per second during peak times."
                 - content:
-                    - text: "Optimized CI Pipelines in a monorepo, driving a noteworthy 30% reduction in average pipeline duration, significantly elevating overall developer productivity across the organization."
+                    - text: "Optimized CI Pipelines in a monorepo, driving a noteable reduction in average pipeline duration, significantly elevating overall developer productivity across the organization."
       - item:
           image: "assets/work/avistopia.png"
+          include_image_in_resume: true
           url: https://en.avistopia.com/
           include_url_in_resume: true
-          title: "Founder & Software Engineer <span class='fw-normal'>@ Avistopia</span>"
+          title: "Software Engineer <span class='fw-normal'>at Avistopia</span>"
           uppercase_title: true
-          cotitle: "2021 - 2022"
+          cotitle: "Oct 2021 - Jun 2022 (9 mos)"
           subtitles:
-            - text: "Learn-Compete-Work platform (startup)."
+            - text: "An EdTech startup with $50K+ annual revenue."
               style: light
           content:
             - badge:
@@ -368,24 +446,23 @@ sections:
                 text: Grafana
             - list:
                 - content:
-                    - text: "Launched a startup with $50K+ revenue in the first year, and growing from then."
-                - content:
-                    - text: "Led 3 engineers under Agile framework; together created a product now hosting 2000+ users and offering 60+ courses and workshops."
+                    - text: "Led 3 engineers under Agile framework; together created a product now hosting 2500+ users and offering 70+ courses and workshops."
                 - content:
                     - text: "Developed a complex registration service with features such as team registration, and installment payment plans, which attracted 400+ users in the initial days."
                 - content:
-                    - text: "Implemented a custom secure web-based media player using JS, to prevent paid course record leakages, resulting in a 50% reduction in such incidents."
+                    - text: "Implemented a custom secure web-based media player using JS, to prevent paid course record leakages."
                 - content:
-                    - text: "Led the development of XUA, a PHP ORM facilitating business complexities such as foreign keys and many-to-many relations, accelerated development by approximately 20%."
+                    - text: "Led the development of XUA, a PHP ORM facilitating business complexities."
       - item:
           image: "assets/work/digikala.png"
+          include_image_in_resume: true
           url: "https://about.digikala.com/en/"
           include_url_in_resume: true
-          title: "Software Engineer <span class='fw-normal'>@ DigiKala</span>"
+          title: "Software Engineer <span class='fw-normal'>at DigiKala</span>"
           uppercase_title: true
-          cotitle: "2020 - 2021"
+          cotitle: "Aug 2020 - Sep 2021 (1 yr 2 mos)"
           subtitles:
-            - text: "The biggest E-commerce in Mena Region with 41+ million active users, alternative for Amazon in Iran."
+            - text: "Alternative for Amazon in Iran with 41+ million active users."
               style: light
           content:
             - badge:
@@ -408,21 +485,22 @@ sections:
                 text: Twig
             - list:
                 - content:
-                    - text: "Implemented a queue management system for sellers, boosting satisfaction by an approximately 20%, faced challenges, such as the following."
+                    - text: "Implemented a queue management system for sellers,"
                     - list:
                         - content:
-                            - text: "Integrated the back-end API with third-party ticket-dispensing kiosks, collaborating closely with an external team."
+                            - text: "Integrated an API with third-party ticket-dispensing devices, collaborating closely with an external team."
                         - content:
-                            - text: "Designed a complex state machine with 50+ states to ensure fair prioritization without compromising user satisfaction."
+                            - text: "Designed a complex state machine to ensure fair prioritization without compromising user satisfaction."
                 - content:
-                    - text: "Designed a warehouse aisle security tracking system with storage constraints (price, category, size), resulting in monthly savings of $100K."
+                    - text: "Designed a warehouse aisle security tracking system with storage constraints (price, category, size)."
       - item:
           image: "assets/work/arithland.png"
+          include_image_in_resume: true
           url: "#"
           include_url_in_resume: false
-          title: "Software Engineer <span class='fw-normal'>@ Arithland</span>"
+          title: "Software Engineer <span class='fw-normal'>at Arithland</span>"
           uppercase_title: true
-          cotitle: "2017 - 2021"
+          cotitle: "Aug 2017 - Jul 2020 (3 yrs)"
           subtitles:
             - text: "An Educational Center promoting mathematics using creative methods."
               style: light
@@ -618,8 +696,6 @@ sections:
                   - name: CSS
                     amount: 9Y
                   - name: Sass
-                    amount: 1Y
-                  - name: UIKit
                     amount: 1Y
                   - name: Bootstrap
                     amount: 9Y
@@ -1244,9 +1320,11 @@ layout:
           sections:
             - passions
   resume:
+    sidebar:
       - about_me
+      - contact
       - education
-      - work_experience
       - skills
-      - volunteer_experience
-      - understandings
+    main:
+      - work_experience
+      - languages
