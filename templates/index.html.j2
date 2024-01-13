@@ -105,8 +105,10 @@
         <a class="{{ item.link.style }}" href="{{ item.link.url }}" target="_blank">{{ item.link.text }}</a>
     {% elif "br" in item %}
         <br>
-    {% elif "badge" in item %}
-        <span class="km-badge km-badge-{{ item.badge.style }}">{{ item.badge.text }}</span>
+    {% elif "badges" in item %}
+        {% for badge in item.badges %}
+            <span class="km-badge km-badge-{{ badge.style }}">{{ badge.text }}</span>
+        {% endfor %}
     {% elif "h3" in item %}
         <h3 class="km-h3">{{ item.h3 }}</h3>
     {% elif "item" in item %}

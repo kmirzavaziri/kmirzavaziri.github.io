@@ -15,7 +15,8 @@
 {%- endmacro %}
 
 {% macro render_contact() -%}
-    <address class="mt-10">
+    <address class="mt-5">
+        <h2>Contact</h2>
         {% for contact in info.contact %}
             {% if contact.include_in_resume %}
                 <img class="icon" alt="{{ contact.title }}" src="{{ contact.image }}">
@@ -31,7 +32,7 @@
 {%- endmacro %}
 
 {% macro render_education() -%}
-    <section class="mt-10">
+    <section class="mt-5">
         <h2>Education</h2>
         {% for education in info.education %}
             <h3>{{ education.school }}</h3>
@@ -47,22 +48,22 @@
 {%- endmacro %}
 
 {% macro render_skills() -%}
-    <section class="mt-10 align-start">
+    <section class="mt-5 align-start">
         <h2>Skills</h2>
         {% for skills in info.resume_skills %}
             <h3>{{ skills.title }}</h3>
-            {% for skill in skills.skills %}
-                <span class="km-badge">
-			{{ skill.name }}
-			<span class="fw-normal">({{ skill.amount }})</span>
-			</span>
-            {% endfor %}
+            <div class="skills">
+                {% for skill in skills.skills %}
+                    {% if not loop.first %}·{% endif %}
+                    {{ skill.name }}<span class="skill-amount"> {{ skill.amount }}</span>
+                {% endfor %}
+            </div>
         {% endfor %}
     </section>
 {%- endmacro %}
 
 {% macro render_languages() -%}
-    <section class="mt-10">
+    <section class="mt-5">
         <h2>Languages</h2>
         <div class="d-flex gap-20">
             {% for language in info.languages %}
@@ -77,7 +78,7 @@
 
 {% macro render_section(section_name) -%}
     {% set section = info.sections[section_name] %}
-    <section class="mt-10">
+    <section class="mt-5">
         <h2>{{ section.title }}</h2>
         {% for inner_item in section.content %} {{ render_item(inner_item) }} {% endfor %}
     </section>
@@ -122,8 +123,10 @@
             </p>
             {% for inner_item in item.item.content %} {{ render_item(inner_item) }} {% endfor %}
         </div>
-    {% elif "badge" in item %}
-        <span class="km-badge km-badge-{{ item.badge.style }}">{{ item.badge.text }}</span>
+    {% elif "badges" in item %}
+        <div class="badges">
+            {{ item.badges|map(attribute='text')|join(' · ') }}
+        </div>
     {% elif "link" in item %}
         <a href="{{ item.link.url }}" target="_blank">{{ item.link.url }}</a>
     {% else %}
@@ -153,7 +156,7 @@
             font-family: 'Poppins', sans-serif;
             font-size: 10pt;
             text-align: justify;
-            line-height: 1.2;
+            line-height: 1.1;
             margin: 0;
             background-color: #F5EFE6;
         }
@@ -166,8 +169,8 @@
         }
 
         h2 {
-            font-size: 16pt;
-            margin: 10px 0 10px 0;
+            font-size: 14pt;
+            margin: 3px 0;
             color: #522E24;
         }
 
@@ -197,10 +200,11 @@
 
         address {
             font-style: normal;
+            line-height: 1.5;
         }
 
-        .mt-10 {
-            margin-top: 10px;
+        .mt-5 {
+            margin-top: 5px;
         }
 
         .align-start {
@@ -253,44 +257,20 @@
             color: #F5EFE6;
         }
 
-        .sidebar h2 {
-            font-size: 14pt;
-            margin: 5px 0 0 0;
-        }
-
         .sidebar h3 {
-            font-size: 11pt;
-            margin: 5px 0 0 0;
+            margin: 5px 0;
         }
-
-        .main {
-            width: 67%;
-            padding: 15px;
-        }
-
-        .km-badge {
-            display: inline-block;
-            margin: 2px 0;
-            border-radius: 5px;
-            padding: 2px 3px 0 3px;
-            background-color: #522E24;
-            color: #F5EFE6;
-            font-size: 8pt;
-            font-weight: 600;
-            font-style: italic;
-        }
-
-        .sidebar .km-badge {
-            background-color: #F5EFE6;
-            color: #522E24;
-        }
-
 
         .sidebar .subtitle {
             font-weight: 200;
             margin: 0;
             border: none;
             font-size: 12pt;
+        }
+
+        .main {
+            width: 67%;
+            padding: 15px;
         }
 
         .fw-normal {
@@ -309,16 +289,32 @@
         }
 
         .item-content {
-            margin: 2px 14px;
+            margin: 1px 14px;
             border-left: 4px dotted rgba(82, 46, 36, 0.3);
             padding-left: 14px;
         }
 
         .avatar {
-            height: 100px;
-            width: 100px;
+            height: 75px;
+            width: 75px;
             background-color: #F5EFE6;
             border-radius: 1999px;
+        }
+
+        .badges {
+            font-style: italic;
+            font-size: 7pt;
+            margin: 5px 0;
+            text-align: start;
+        }
+
+        .skills {
+            line-height: 1.4;
+        }
+
+        .skill-amount {
+            font-weight: 300;
+            font-size: 9pt;
         }
     </style>
 </head>

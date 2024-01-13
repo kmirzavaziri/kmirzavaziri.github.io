@@ -215,7 +215,7 @@ languages:
 resume_skills:
   - title: Backend (Primary)
     skills:
-      - name: Linux (Ubuntu)
+      - name: Linux
         amount: 6Y
       - name: Docker
         amount: 2Y
@@ -285,7 +285,7 @@ sections:
     style: green
     title: About Me
     content:
-      - text: "With over 7 years of experience in programming, I bring a versatile skill set to software engineering. My expertise spans a broad range of tools, allowing me to contribute valuable insights to the field. Over the past 3 years, I've worked in diverse professional settings, from dynamic startups to established enterprises dealing with high-scale demands, approaching near 26K requests per second. This journey underscores my adaptability to various scales and complexities, highlighting my consistent commitment to employing cutting-edge technologies and best practices to drive impactful results."
+      - text: "With over 6 years of experience in programming, I bring a versatile skill set to software engineering. My expertise spans a broad range of tools, allowing me to contribute valuable insights to the field. Over the past 3 years, I've worked in diverse professional settings, from dynamic startups to established enterprises dealing with high-scale demands, approaching near 26K requests per second. This journey underscores my adaptability to various scales and complexities, highlighting my consistent commitment to employing cutting-edge technologies and best practices to drive impactful results."
   education:
     style: yellow
     title: Education
@@ -338,41 +338,30 @@ sections:
             - text: "Somehow alternative for eBay in Iran with 60+ million active users."
               style: light
           content:
-            - badge:
-                style: green
+            - badges:
+              - style: green
                 text: K8s
-            - badge:
-                style: green
+              - style: green
                 text: Docker
-            - badge:
-                style: green
+              - style: green
                 text: Gitlab CI
-            - badge:
-                style: blue
+              - style: blue
                 text: Go
-            - badge:
-                style: blue
+              - style: blue
                 text: Python
-            - badge:
-                style: red
+              - style: red
                 text: Redis
-            - badge:
-                style: red
+              - style: red
                 text: PostgreSQL
-            - badge:
-                style: red
+              - style: red
                 text: MongoDB
-            - badge:
-                style: red
+              - style: red
                 text: RabbitMQ
-            - badge:
-                style: red
+              - style: red
                 text: Kafka
-            - badge:
-                style: purple
+              - style: purple
                 text: Prometheus
-            - badge:
-                style: purple
+              - style: purple
                 text: Grafana
             - list:
                 - content:
@@ -411,38 +400,28 @@ sections:
             - text: "An EdTech startup with $50K+ annual revenue."
               style: light
           content:
-            - badge:
-                style: green
+            - badges:
+              - style: green
                 text: Docker
-            - badge:
-                style: green
+              - style: green
                 text: Nginx
-            - badge:
-                style: green
+              - style: green
                 text: GitHub Actions
-            - badge:
-                style: blue
+              - style: blue
                 text: PHP
-            - badge:
-                style: blue
+              - style: blue
                 text: JS
-            - badge:
-                style: red
+              - style: red
                 text: MySQL
-            - badge:
-                style: red
+              - style: red
                 text: Redis
-            - badge:
-                style: yellow
+              - style: yellow
                 text: Twig
-            - badge:
-                style: yellow
+              - style: yellow
                 text: Sass
-            - badge:
-                style: purple
+              - style: purple
                 text: Prometheus
-            - badge:
-                style: purple
+              - style: purple
                 text: Grafana
             - list:
                 - content:
@@ -465,23 +444,18 @@ sections:
             - text: "Alternative for Amazon in Iran with 41+ million active users."
               style: light
           content:
-            - badge:
-                style: blue
+            - badges:
+              - style: blue
                 text: PHP
-            - badge:
-                style: blue
+              - style: blue
                 text: Symfony
-            - badge:
-                style: blue
+              - style: blue
                 text: JS
-            - badge:
-                style: red
+              - style: red
                 text: MySQL
-            - badge:
-                style: red
+              - style: red
                 text: Redis
-            - badge:
-                style: yellow
+              - style: yellow
                 text: Twig
             - list:
                 - content:
@@ -505,9 +479,30 @@ sections:
             - text: "An Educational Center promoting mathematics using creative methods."
               style: light
           content:
+            - badges:
+              - style: red
+                text: MySQL
+              - style: blue
+                text: PHP
+              - style: blue
+                text: JavaScript
+              - style: blue
+                text: C#
+              - style: yellow
+                text: HTML
+              - style: yellow
+                text: CSS
+              - style: yellow
+                text: Bootstrap
+              - style: gray
+                text: WordPress
             - list:
                 - content:
-                    - text: Implemented 4+ applications, turned the old-fashioned competitions into high-tech ones.
+                    - text: Automated Arithland competition score tracking with PHP, later optimized in C# for easy setup.
+                - content:
+                    - text: Executed full-stack development for a user-friendly participant registration website from scratch, utilizing pure PHP for the back end.
+                - content:
+                    - text: Customized an online shop with WordPress and WooCommerce, boosting revenue and enhancing user experience.
   volunteer_experience:
     style: blue
     title: Volunteer Experience
@@ -623,7 +618,7 @@ sections:
             - skills:
                 color: green
                 content:
-                  - name: Linux (Ubuntu)
+                  - name: Linux
                     amount: 6Y
                   - name: Docker
                     amount: 2Y
@@ -818,11 +813,10 @@ sections:
                       - text: Score Tracking Web App for On-Site Competition Arithland
                         style: light
                     content:
-                      - badge:
-                          style: red
+                      - badges:
+                        - style: red
                           text: MySQL
-                      - badge:
-                          style: blue
+                        - style: blue
                           text: PHP
                       - list:
                           - content:
@@ -835,11 +829,10 @@ sections:
                       - text: Mathematics and Physical Activities Promotion Game
                         style: light
                     content:
-                      - badge:
-                          style: red
+                      - badges:
+                        - style: red
                           text: MySQL
-                      - badge:
-                          style: blue
+                        - style: blue
                           text: PHP
                       - list:
                           - content:
@@ -854,11 +847,10 @@ sections:
                       - text: an IoT (Internet of Things) project
                         style: light
                     content:
-                      - badge:
-                          style: red
+                      - badges:
+                        - style: red
                           text: MySQL
-                      - badge:
-                          style: blue
+                        - style: blue
                           text: PHP
                       - list:
                           - content:
@@ -878,14 +870,12 @@ sections:
                       - text: Tourism Social Network
                         style: light
                     content:
-                      - badge:
-                          style: red
+                      - badges:
+                        - style: red
                           text: MySQL
-                      - badge:
-                          style: blue
+                        - style: blue
                           text: PHP
-                      - badge:
-                          style: gray
+                        - style: gray
                           text: Wordpress
                       - list:
                           - content:
@@ -898,14 +888,12 @@ sections:
                       - text: Ranking Website
                         style: light
                     content:
-                      - badge:
-                          style: red
+                      - badges:
+                        - style: red
                           text: MySQL
-                      - badge:
-                          style: blue
+                        - style: blue
                           text: PHP
-                      - badge:
-                          style: gray
+                        - style: gray
                           text: Wordpress
                       - list:
                           - content:
@@ -924,20 +912,16 @@ sections:
                       - text: Web/Mobile App Investment Platform
                         style: light
                     content:
-                      - badge:
-                          style: green
+                      - badges:
+                        - style: green
                           text: Docker
-                      - badge:
-                          style: green
+                        - style: green
                           text: Nginx
-                      - badge:
-                          style: green
+                        - style: green
                           text: GitHub Actions
-                      - badge:
-                          style: red
+                        - style: red
                           text: MySQL
-                      - badge:
-                          style: blue
+                        - style: blue
                           text: PHP
                       - list:
                           - content:
@@ -957,8 +941,8 @@ sections:
                       - text: Iago's Another Go ORM
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Go
                       - list:
                           - content:
@@ -971,8 +955,8 @@ sections:
                       - text: Live Currency Rate Telegram Bot
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Go
                       - list:
                           - content:
@@ -985,8 +969,8 @@ sections:
                       - text: Social-Network Profile Manager Services
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Go
                       - list:
                           - content:
@@ -1001,11 +985,10 @@ sections:
                       - text: Financial Market Trader Bot
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Python
-                      - badge:
-                          style: blue
+                        - style: blue
                           text: Go
                       - list:
                           - content:
@@ -1022,20 +1005,16 @@ sections:
                       - text: Course Assistant App
                         style: light
                     content:
-                      - badge:
-                          style: red
+                      - badges:
+                        - style: red
                           text: MySQL
-                      - badge:
-                          style: blue
+                        - style: blue
                           text: PHP
-                      - badge:
-                          style: gray
+                        - style: gray
                           text: UI/UX Design (Figma)
-                      - badge:
-                          style: gray
+                        - style: gray
                           text: Flutter
-                      - badge:
-                          style: gray
+                        - style: gray
                           text: Dart
                       - list:
                           - content:
@@ -1057,14 +1036,12 @@ sections:
                       - text: Quote Reminder Mobile App
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Go
-                      - badge:
-                          style: gray
+                        - style: gray
                           text: Flutter
-                      - badge:
-                          style: gray
+                        - style: gray
                           text: Dart
                       - list:
                           - content:
@@ -1077,11 +1054,10 @@ sections:
                       - text: Mathematics Promotion Game
                         style: light
                     content:
-                      - badge:
-                          style: gray
+                      - badges:
+                        - style: gray
                           text: Flutter
-                      - badge:
-                          style: gray
+                        - style: gray
                           text: Dart
                       - list:
                           - content:
@@ -1096,9 +1072,8 @@ sections:
                       - text: Instagram Effect
                         style: light
                     content:
-                      - badge:
-                          style: gray
-                          text: Meta Spark
+                      - style: gray
+                        text: Meta Spark
                       - list:
                           - content:
                               - text: The effect consists of a floating egg over the user's head telling the fortune.
@@ -1118,11 +1093,10 @@ sections:
                       - text: A Compiler for The COOL Language
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: C
-                      - badge:
-                          style: blue
+                        - style: blue
                           text: Java
                 - item:
                     image: "assets/projects/assembler.gif"
@@ -1132,8 +1106,8 @@ sections:
                       - text: Assembly Compiler/Decompiler Written in Assembly
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Assembly
                 - item:
                     image: "assets/projects/nn.jpg"
@@ -1143,8 +1117,8 @@ sections:
                       - text: An Implementation of A Neural Network From Scratch
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Python
                       - list:
                           - content:
@@ -1157,8 +1131,8 @@ sections:
                       - text: An Implementation of Genetic & Memetic Algorithms From Scratch
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Python
             - width: 6
               content:
@@ -1170,8 +1144,8 @@ sections:
                       - text: Full-Featured Multiplayer Billiard Game Written in C++
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: C++
                       - list:
                           - content:
@@ -1184,8 +1158,8 @@ sections:
                       - text: Full-Featured Multiplayer Quoridor & Battleship Games
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Python
                 - item:
                     image: "assets/projects/zindi.jpg"
@@ -1195,8 +1169,8 @@ sections:
                       - text: A Data Science Bonus Project
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: R
                       - list:
                           - content:
@@ -1209,8 +1183,8 @@ sections:
                       - text: An Cancer Cells Diagnosis AI Agent
                         style: light
                     content:
-                      - badge:
-                          style: blue
+                      - badges:
+                        - style: blue
                           text: Python
   gallery:
     style: black
@@ -1323,8 +1297,8 @@ layout:
     sidebar:
       - about_me
       - contact
-      - education
       - skills
+      - education
     main:
       - work_experience
       - languages
