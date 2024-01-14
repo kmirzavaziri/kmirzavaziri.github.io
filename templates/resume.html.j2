@@ -40,7 +40,7 @@
             <p>{{ education.start }} - {{ education.end }}</p>
             <ul>
                 {% for li in education.details %}
-                    <li class="light">{{ li }}</li>
+                    <li><p class="v-light">{{ li }}</p></li>
                 {% endfor %}
             </ul>
         {% endfor %}
@@ -65,14 +65,12 @@
 {% macro render_languages() -%}
     <section class="mt-5">
         <h2>Languages</h2>
-        <div class="d-flex gap-20">
-            {% for language in info.languages %}
-                <div>
-                    <h3>{{ language.language }}</h3>
-                    <p>{{ language.proficiency }}</p>
-                </div>
-            {% endfor %}
-        </div>
+        {% for language in info.languages %}
+            <div>
+                <h3>{{ language.language }}</h3>
+                <p>{{ language.proficiency }}</p>
+            </div>
+        {% endfor %}
     </section>
 {%- endmacro %}
 
@@ -107,20 +105,20 @@
             <div>
                 <h3>
                     {{ item.item.title }}
+                    {% if "cotitle" in item.item %}
+                        <span class="cotitle"> · {{ item.item.cotitle }}</span>
+                    {% endif %}
                 </h3>
-                {% if "cotitle" in item.item %}
-                    <span class="cotitle">{{ item.item.cotitle }}</span>
-                {% endif %}
+                <p class="light">
+                    {% if item.item.include_url_in_resume %}
+                        <a href="{{ item.item.url }}">{{ item.item.subtitles|map(attribute="text")|join(" · ") }}</a>
+                    {% else %}
+                        {{ item.item.subtitles|map(attribute="text")|join(" · ") }}
+                    {% endif %}
+                </p>
             </div>
         </div>
         <div class="item-content">
-            <p class="light">
-                {% if item.item.include_url_in_resume %}
-                    <a href="{{ item.item.url }}">{{ item.item.subtitles|map(attribute="text")|join(" · ") }}</a>
-                {% else %}
-                    {{ item.item.subtitles|map(attribute="text")|join(" · ") }}
-                {% endif %}
-            </p>
             {% for inner_item in item.item.content %} {{ render_item(inner_item) }} {% endfor %}
         </div>
     {% elif "badges" in item %}
@@ -152,31 +150,48 @@
             size: a4;
         }
 
+        :root {
+            --bg: #FBF9F1;
+            --fg: #323643;
+            --headings: #2185D5;
+            --sub-headings: #3A4750;
+            --headings-low-opacity: rgba(33, 133, 213, 0.3);
+            --link: #009aa7;
+
+            --alternate-bg: #E5E1DA;
+            --alternate-fg: #323643;
+            --alternate-headings: #2185D5;
+            --alternate-sub-headings: #3A4750;
+            --alternate-link: #009aa7;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             font-size: 10pt;
             text-align: justify;
             line-height: 1.1;
             margin: 0;
-            background-color: #F5EFE6;
+            background-color: var(--bg);
+            color: var(--fg);
         }
 
         h1 {
             font-size: 18pt;
             font-weight: 900;
             margin: 0;
-            color: #F5EFE6;
+            color: var(--alternate-headings);
         }
 
         h2 {
             font-size: 14pt;
             margin: 3px 0;
-            color: #522E24;
+            color: var(--headings);
         }
 
         h3 {
             font-size: 11pt;
             margin: 0;
+            color: var(--sub-headings);
         }
 
         h4 {
@@ -186,16 +201,17 @@
         }
 
         p {
-            margin: 0;
+            margin: 5px 0;
         }
 
         ul {
             margin: 0;
             padding: 0 20px;
+            list-style-type: disc;
         }
 
         a {
-            color: #2A769A;
+            color: var(--link);
         }
 
         address {
@@ -230,10 +246,6 @@
             gap: 10px;
         }
 
-        .gap-20 {
-            gap: 20px;
-        }
-
         .align-items-center {
             align-items: center;
         }
@@ -244,20 +256,22 @@
 
         .sidebar {
             width: 33%;
-            background-color: #522E24;
-            color: #F1E4C3;
+            background-color: var(--alternate-bg);
+            color: var(--alternate-fg);
             padding: 15px;
         }
 
         .sidebar a {
-            color: #8FBDD3;
+            color: var(--alternate-link);
         }
 
-        .sidebar h2, .sidebar h3 {
-            color: #F5EFE6;
+        .sidebar h2 {
+            color: var(--alternate-headings);
+            margin: 10px 0 5px 0;
         }
 
         .sidebar h3 {
+            color: var(--alternate-sub-headings);
             margin: 5px 0;
         }
 
@@ -280,6 +294,11 @@
         .light {
             font-size: 9pt;
             font-style: italic;
+        }
+
+        .v-light {
+            font-size: 9pt;
+            font-style: italic;
             opacity: .8;
         }
 
@@ -289,15 +308,15 @@
         }
 
         .item-content {
-            margin: 1px 14px;
-            border-left: 4px dotted rgba(82, 46, 36, 0.3);
+            margin: 5px 14px;
+            border-left: 4px dotted var(--headings-low-opacity);
             padding-left: 14px;
         }
 
         .avatar {
             height: 75px;
             width: 75px;
-            background-color: #F5EFE6;
+            background-color: var(--alternate-headings);
             border-radius: 1999px;
         }
 
@@ -309,7 +328,8 @@
         }
 
         .skills {
-            line-height: 1.4;
+            line-height: 1.5;
+            font-weight: 500;
         }
 
         .skill-amount {
