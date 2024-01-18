@@ -135,10 +135,10 @@ contact:
     #    url: "https://en.wikipedia.org/wiki/Dubai"
     include_in_resume: true
 
-  - title: Phone
-    image: assets/contact/phone.png
-    text: "+1 (541) 321 0338"
-    url: "tel:+15413210338"
+  - title: Whatsapp
+    image: assets/contact/whatsapp.png
+    text: "+971 56 703 7135"
+    url: "https://wa.me/971567037135"
     include_in_resume: true
 
   - title: Email
@@ -281,11 +281,11 @@ resume_skills:
         amount: <1Y
 
 sections:
-  about_me:
+  summary:
     style: green
-    title: About Me
+    title: Summary
     content:
-      - text: "Over 6 years of experience in programming, provides a diverse skill set to software engineering. Expertise spans a broad range of tools, allowing to contribute valuable insights to the field. Over the past 4 years, worked in diverse professional settings, from startups to established enterprises dealing with high-scale demands, approaching near 26K requests per second. This journey underscores the ability to adopt to various scales and complexities, highlighting consistent commitment to employing cutting-edge technologies and best practices to drive impactful results."
+      - text: "6+ years experience in programming, the evolution of skill set ranges from LNMP stack to Python, Django, and proficiency in micro-services practices and cutting-edge technologies such as Golang, Docker, Kubernetes, Kafka, CI/CD, and Monitoring (Prometheus, Grafana) across domains like e-commerce, EdTech, and advertisement, managing high-scale demands, handling ~26K requests per second."
   education:
     style: yellow
     title: Education
@@ -1261,7 +1261,7 @@ layout:
     - cols:
         - width: 4
           sections:
-            - about_me
+            - summary
             - contact_or_terminal
             - education
             - languages
@@ -1295,9 +1295,10 @@ layout:
             - passions
   resume:
     sidebar:
+      - summary
       - contact
       - skills
       - education
-      - languages
     main:
       - work_experience
+      - languages
