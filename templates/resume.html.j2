@@ -50,14 +50,17 @@
 {% macro render_skills() -%}
     <section class="mt-5 align-start">
         <h2>Skills</h2>
-        {% for skills in info.resume_skills %}
-            <h3>{{ skills.title }}</h3>
-            <div class="skills">
-                {% for skill in skills.skills %}
-                    {% if not loop.first %}·{% endif %}
-                    {{ skill.name }}<span class="skill-amount"> {{ skill.amount }}</span>
-                {% endfor %}
-            </div>
+        {% for skills_info in info.resume_skills %}
+            <h3>{{ skills_info.title }}</h3>
+            {% for level in skills_info.levels %}
+                <div class="skills">
+                    <h4 class="d-inline">{{ level.title }}</h4>
+                    {% for skill in level.skills %}
+                        {% if not loop.first %}·{% endif %}
+                        <span>{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            {% endfor %}
         {% endfor %}
     </section>
 {%- endmacro %}
@@ -201,7 +204,7 @@
         }
 
         p {
-            margin: 5px 0;
+            margin: 3px 0;
         }
 
         ul {
@@ -240,6 +243,10 @@
         .d-flex {
             display: flex;
             align-items: stretch;
+        }
+
+        .d-inline {
+            display: inline;
         }
 
         .gap-10 {
@@ -334,12 +341,6 @@
 
         .skills {
             line-height: 1.5;
-            font-weight: 500;
-        }
-
-        .skill-amount {
-            font-weight: 300;
-            font-size: 9pt;
         }
     </style>
 </head>

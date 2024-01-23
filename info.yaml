@@ -176,6 +176,11 @@ contact:
     text: "Telegram"
     url: "https://t.me/kmirzavaziri"
 
+  - title: X
+    image: assets/contact/x.png
+    text: "X"
+    url: "https://x.com/kmirzavaziri"
+
   - title: GitHub
     image: assets/tools/github.png
     text: GitHub
@@ -214,78 +219,49 @@ languages:
 
 resume_skills:
   - title: Backend (Primary)
-    skills:
-      - name: Linux
-        amount: 6Y
-      - name: Docker
-        amount: 2Y
-      - name: Kubernetes
-        amount: 1Y
-      - name: GitHub Actions
-        amount: 1Y
-      - name: Gitlab CI
-        amount: 1Y
-      - name: Nginx
-        amount: 2Y
-      - name: Ansible
-        amount: 1Y
-      - name: MySQL
-        amount: 9Y
-      - name: Redis
-        amount: 3Y
-      - name: PostgreSQL
-        amount: 1Y
-      - name: MongoDB
-        amount: 1Y
-      - name: RabbitMQ
-        amount: 1Y
-      - name: Kafka
-        amount: 1Y
-      - name: Python
-        amount: 6Y
-      - name: Django
-        amount: 1Y
-      - name: Go
-        amount: 1Y
-      - name: PHP
-        amount: 9Y
-      - name: Symfony
-        amount: 1Y
-      - name: Prometheus
-        amount: 1Y
-      - name: Grafana
-        amount: 1Y
+    levels:
+      - title: Expert in
+        skills:
+          - Go
+          - Python
+          - PHP
+          - SQL
+      - title: Experienced in
+        skills:
+          - Kubernetes
+          - Docker
+          - Linux
+          - CI/CD
+          - Django
+          - Redis
+      - title: Familiar with
+        skills:
+          - Nginx
+          - Kafka
+          - Ansible
+          - MongoDB
+          - RabbitMQ
+          - Prometheus
   - title: Other Stacks
-    skills:
-      - name: JavaScript
-        amount: 9Y
-      - name: HTML
-        amount: 9Y
-      - name: Jinja
-        amount: 1Y
-      - name: Twig
-        amount: 2Y
-      - name: CSS
-        amount: 9Y
-      - name: Sass
-        amount: 1Y
-      - name: Bootstrap
-        amount: 9Y
-      - name: WordPress
-        amount: 2Y
-      - name: UI/UX (Figma)
-        amount: 1Y
-      - name: Flutter
-        amount: <1Y
-      - name: Dart
-        amount: <1Y
+    levels:
+      - title: Experienced in
+        skills:
+        - JS
+        - HTML
+        - CSS
+      - title: Familiar with
+        skills:
+        - WordPress
+        - UI/UX (Figma)
+        - Flutter
+        - Dart
 
 sections:
   summary:
     style: green
     title: Summary
     content:
-      - text: "6+ years experience in programming, the evolution of skill set ranges from LNMP stack to Python, Django, and proficiency in micro-services practices and cutting-edge technologies such as Golang, Docker, Kubernetes, Kafka, CI/CD, and Monitoring (Prometheus, Grafana) across domains like e-commerce, EdTech, and advertisement, managing high-scale demands, handling ~26K requests per second."
+      - text: "With 6 years of programming experience, including 3 years in software engineering for enterprise-level companies in E-commerce, EdTech, and Advertisement domains, I bring a deep proficiency in diverse range of technologies and domains. My journey, starting with the LEMP stack and evolving into microservices with Golang, K8s, and Kafka, has led me to my current role serving as an SRE for a company managing ~26K requests per second. Passionate about cutting-edge tech, I contribute to open source projects and my personal mini-projects in my free time."
   education:
     style: yellow
     title: Education
@@ -365,10 +341,10 @@ sections:
                 text: Grafana
             - list:
                 - content:
-                    - text: "Took a major role in redesigning the Submit micro-service from Python to Go and REST to gRPC, achieved the following."
+                    - text: "Took a major role in redesigning the Submit micro-service by Go/gRPC (from Python/REST), which led to"
                     - list:
                         - content:
-                            - text: "faster development,"
+                            - text: "higher developer productivity,"
                         - content:
                             - text: "99.9% up-time. (up from 99.84%),"
                         - content:
@@ -378,16 +354,16 @@ sections:
                         - content:
                             - text: "a notable reduction in call center load."
                 - content:
-                    - text: "Optimized the Post Stats micro-service,"
+                    - text: "Optimized the Post Stats micro-service architecture by shifting sync calls to async Kafka events, which led to"
                     - list:
                         - content:
-                            - text: "Reduced service requests from 7K to 200 per second by shifting sync calls to async via Kafka. Improved fault tolerance by storing events during system downtime, preventing data loss experienced with sync calls."
+                            - text: "higher fault tolerance, preventing data loss,"
                         - content:
-                            - text: "Freed up 24 CPU cores and 120 GiB of memory, resulting in a remarkable 66% reduction in consumed resources."
+                            - text: "200 requests per second (down from 7K), which led to 66% reduction in consumed resources (freed up 24 CPU cores and 120 GiB of memory)."
                 - content:
-                    - text: "Managed the PostAPI micro-service, efficiently handling 6K+ requests per second during peak times."
+                    - text: "Reduced the average CI pipeline duration to &lt; 2min (from &gt; 5) in a monorepo by employing cache and following CI pipelines best practices, which led to significantly elevating overall developer productivity across the organization."
                 - content:
-                    - text: "Optimized CI Pipelines in a monorepo, driving a noteable reduction in average pipeline duration, significantly elevating overall developer productivity across the organization."
+                    - text: "Served as the maintainer of Post View micro-service, with the average load of 6K+ requests per second."
       - item:
           image: "assets/work/avistopia.png"
           include_image_in_resume: true
@@ -425,13 +401,11 @@ sections:
                 text: Grafana
             - list:
                 - content:
-                    - text: "Led 3 engineers under Agile framework; together created a product now hosting 2500+ users and offering 70+ courses and workshops."
+                    - text: "Crafted an LMS by leading 3 engineers under Agile framework; achieving a product now hosting 2500+ users and offering 70+ courses and workshops."
                 - content:
-                    - text: "Developed a complex registration service with features such as team registration, and installment payment plans, which attracted 400+ users in the initial days."
+                    - text: "Developed a complex registration service with features such as team registration, and installment payment plans, by following clean code principles and OOP design patterns, which attracted 400+ users in the initial days."
                 - content:
-                    - text: "Implemented a custom secure web-based media player using JS, to prevent paid course record leakages."
-                - content:
-                    - text: "Led the development of XUA, a PHP ORM facilitating business complexities."
+                    - text: "Implemented a custom secure web-based media player by rendering the video frame-by-frame in JS, preventing the leakage chance of premium courses."
       - item:
           image: "assets/work/digikala.png"
           include_image_in_resume: true
@@ -462,11 +436,12 @@ sections:
                     - text: "Implemented a queue management system for sellers,"
                     - list:
                         - content:
-                            - text: "Integrated an API with third-party ticket-dispensing devices, collaborating closely with an external team."
+                            - text: "by integrating an API with third-party ticket-dispensing devices, collaborating closely with an external team,"
                         - content:
-                            - text: "Designed a complex state machine to ensure fair prioritization without compromising user satisfaction."
+                            - text: "and designing a complex state machine,"
+                    - text: "achieving higher user satisfaction."
                 - content:
-                    - text: "Designed a warehouse aisle security tracking system with storage constraints (price, category, size)."
+                    - text: "Engineered a warehouse security tracking system with a customizable storage constraints panel, resulting in a $20K monthly cost savings."
       - item:
           image: "assets/work/arithland.png"
           include_image_in_resume: true
@@ -498,11 +473,11 @@ sections:
                 text: WordPress
             - list:
                 - content:
-                    - text: Automated Arithland competition score tracking with PHP, later redesigned in C# for easy setup.
+                    - text: "Automated Arithland competition score tracking with PHP, later optimized in C# for easy setup, reducing personnel needs and boosting efficiency."
                 - content:
-                    - text: Executed full-stack development for a user-friendly participant registration website from scratch, utilizing pure PHP for the back end.
+                    - text: "Automated the competition participant registration by developing a user-friendly website from scratch, achieving efficient organization of a larger number of competitions within a shorter timeframe."
                 - content:
-                    - text: Customized an online shop with WordPress and WooCommerce, boosting revenue and enhancing user experience.
+                    - text: "Customized an online shop by WordPress and WooCommerce, which led to revenue growth and higher user satisfaction."
   volunteer_experience:
     style: blue
     title: Volunteer Experience
