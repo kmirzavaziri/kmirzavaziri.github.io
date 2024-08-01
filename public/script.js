@@ -87,9 +87,13 @@ function initTerminal() {
                 "work-experience": {
                     type: "dir",
                     content: {
+                        "best-wing": {
+                            type: "file",
+                            content: "working as a senior software engineer from 2024",
+                        },
                         "divar": {
                             type: "file",
-                            content: "working as a mid-level software engineer from 2022",
+                            content: "working as a mid-level software engineer from 2022 to 2024",
                         },
                         "avistopia": {
                             type: "file",
