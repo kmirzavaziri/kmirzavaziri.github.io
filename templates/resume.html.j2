@@ -36,8 +36,7 @@
         <h2>Education</h2>
         {% for education in info.education %}
             <h3>{{ education.school }}</h3>
-            <h4>{{ education.degree }}, {{ education.field }}</h4>
-            <p>{{ education.start }} - {{ education.end }}</p>
+            <p class="light">{{ education.degree_field_short }}, {{ education.start }} - {{ education.end }}</p>
             <ul>
                 {% for li in education.details %}
                     <li><p class="v-light">{{ li }}</p></li>
@@ -266,7 +265,7 @@
         }
 
         .sidebar {
-            width: 33%;
+            width: 30%;
             background-color: var(--alternate-bg);
             color: var(--alternate-fg);
             padding: 15px;
@@ -279,7 +278,7 @@
 
         .sidebar h2 {
             color: var(--alternate-headings);
-            margin: 10px 0 5px 0;
+            margin: 5px 0 0 0;
         }
 
         .sidebar h3 {
@@ -295,7 +294,7 @@
         }
 
         .main {
-            width: 67%;
+            width: 70%;
             padding: 15px;
         }
 
@@ -316,11 +315,11 @@
 
         .cotitle {
             font-weight: 200;
-            font-size: 10pt;
+            font-size: 9pt;
         }
 
         .item-content {
-            margin: 8px 14px;
+            margin: 0 14px;
             border-left: 4px dotted var(--headings-low-opacity);
             padding-left: 14px;
         }
@@ -337,6 +336,7 @@
             font-size: 7pt;
             margin: 5px 0;
             text-align: start;
+            word-spacing: -1px;
         }
 
         .skills {

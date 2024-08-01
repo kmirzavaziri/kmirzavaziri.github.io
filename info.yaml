@@ -135,10 +135,10 @@ contact:
     #    url: "https://en.wikipedia.org/wiki/Dubai"
     include_in_resume: true
 
-  - title: Whatsapp
-    image: assets/contact/whatsapp.png
-    text: "+971 56 703 7135"
-    url: "https://wa.me/971567037135"
+  - title: Phone
+    image: assets/contact/phone.png
+    text: "+971 54 546 1377"
+    url: "tel:+971545461377"
     include_in_resume: true
 
   - title: Email
@@ -199,14 +199,16 @@ contact:
 education:
   - degree: Master's degree
     field: Computer Science
+    degree_field_short: M.Sc. CS
     school: Sharif University of Technology
-    start: Sep 2022
-    end: Present
+    start: 2022
+    end: 2023 (Drop-out)
   - degree: Bachelor's degree
     field: Computer Science
+    degree_field_short: B.Sc. CS
     school: University of Tehran
-    start: Sep 2017
-    end: Mar 2022
+    start: 2017
+    end: 2022
     details:
       - Served as Chief Scientific Officer at the Scientific Association of Computer Science for 1 year.
       - TA for 4 courses, including Head TA managing 3 other assistants in one course.
@@ -242,6 +244,8 @@ resume_skills:
           - MongoDB
           - RabbitMQ
           - Prometheus
+          - AWS (EC2, ECS, S3, RDS)
+          - Terraform
   - title: Other Stacks
     levels:
       - title: Experienced in
@@ -261,7 +265,11 @@ sections:
     style: green
     title: Summary
     content:
-      - text: "With 6 years of programming experience, including 3 years in software engineering for enterprise-level companies in E-commerce, EdTech, and Advertisement domains, I bring a deep proficiency in diverse range of technologies and domains. My journey, starting with the LEMP stack and evolving into microservices with Golang, K8s, and Kafka, has led me to my current role serving as an SRE for a company managing ~26K requests per second. Passionate about cutting-edge tech, I contribute to open source projects and my personal mini-projects in my free time."
+      - text: >-
+          With 7 years of programming experience, including 4 years in enterprise Software Engineering across FinTech,
+          E-commerce, and EdTech, I specialize in designing data-intensive applications with a focus on reliability,
+          scalability, and maintainability. Maintaining high-traffic services handling ~26K req/second provided
+          valuable insights to me. In my free time, I enjoy contributing to open source projects.
   education:
     style: yellow
     title: Education
@@ -303,15 +311,49 @@ sections:
     title: Work Experience
     content:
       - item:
+          image: "assets/work/bestwing.png"
+          include_image_in_resume: true
+          url: "https://www.linkedin.com/company/best-wing-tech-solutions-llc/"
+          include_url_in_resume: true
+          title: "Software Engineer <span class='fw-normal'>at Best Wing</span>"
+          uppercase_title: true
+          cotitle: "Mar 2024 - Present (5 mos) · Dubai"
+          subtitles:
+            - text: "An iGaming & Blockchain startup"
+              style: light
+          content:
+            - badges:
+              - style: green
+                text: AWS
+              - style: green
+                text: Docker
+              - style: green
+                text: Gitlab CI
+              - style: blue
+                text: Go
+              - style: red
+                text: Redis
+              - style: red
+                text: PostgreSQL
+              - style: red
+                text: Kafka
+              - style: red
+                text: Clickhouse
+#            - list:
+#                - content:
+#                    - text: "TODO"
+#                - content:
+#                    - text: "TODO"
+      - item:
           image: "assets/work/divar.png"
           include_image_in_resume: true
           url: "https://careers.divar.ir/en/about-divar"
           include_url_in_resume: true
           title: "Software Engineer <span class='fw-normal'>at Divar</span>"
           uppercase_title: true
-          cotitle: "Jul 2022 - Present (1 yr 7 mos)"
+          cotitle: "Jul 2022 - Mar 2024 (1 yr 9 mos) · Tehran"
           subtitles:
-            - text: "Somehow alternative for eBay in Iran with 60+ million active users."
+            - text: "Alternative for Bayut in Iran with 60+ million active users."
               style: light
           content:
             - badges:
@@ -341,7 +383,7 @@ sections:
                 text: Grafana
             - list:
                 - content:
-                    - text: "Took a major role in redesigning the Submit micro-service by Go/gRPC (from Python/REST), which led to"
+                    - text: "Took a major role in redesigning a Python bottleneck service to Go"
                     - list:
                         - content:
                             - text: "higher developer productivity,"
@@ -354,16 +396,16 @@ sections:
                         - content:
                             - text: "a notable reduction in call center load."
                 - content:
-                    - text: "Optimized the Post Stats micro-service architecture by shifting sync calls to async Kafka events, which led to"
+                    - text: "Optimized a write-heavy service by shifting sync calls to async events"
                     - list:
                         - content:
                             - text: "higher fault tolerance, preventing data loss,"
                         - content:
-                            - text: "200 requests per second (down from 7K), which led to 66% reduction in consumed resources (freed up 24 CPU cores and 120 GiB of memory)."
+                            - text: "66% resource reduction (24 CPU, 120 GiB memory)."
                 - content:
                     - text: "Reduced the average CI pipeline duration to &lt; 2min (from &gt; 5) in a monorepo by employing cache and following CI pipelines best practices, which led to significantly elevating overall developer productivity across the organization."
                 - content:
-                    - text: "Served as the maintainer of Post View micro-service, with the average load of 6K+ requests per second."
+                    - text: "Maintained a read-heavy service, with the average load of 6K+ req/s."
       - item:
           image: "assets/work/avistopia.png"
           include_image_in_resume: true
@@ -371,7 +413,7 @@ sections:
           include_url_in_resume: true
           title: "Software Engineer <span class='fw-normal'>at Avistopia</span>"
           uppercase_title: true
-          cotitle: "Oct 2021 - Jun 2022 (9 mos)"
+          cotitle: "Oct 2021 - Jun 2022 (9 mos) · Tehran"
           subtitles:
             - text: "An EdTech startup with $50K+ annual revenue."
               style: light
@@ -413,7 +455,7 @@ sections:
           include_url_in_resume: true
           title: "Software Engineer <span class='fw-normal'>at DigiKala</span>"
           uppercase_title: true
-          cotitle: "Aug 2020 - Sep 2021 (1 yr 2 mos)"
+          cotitle: "Aug 2020 - Sep 2021 (1 yr 2 mos) · Tehran"
           subtitles:
             - text: "Alternative for Amazon in Iran with 41+ million active users."
               style: light
@@ -449,7 +491,7 @@ sections:
           include_url_in_resume: false
           title: "Software Engineer <span class='fw-normal'>at Arithland</span>"
           uppercase_title: true
-          cotitle: "Aug 2017 - Jul 2020 (3 yrs)"
+          cotitle: "Aug 2017 - Jul 2020 (3 yrs) · Mashhad"
           subtitles:
             - text: "An Educational Center promoting mathematics using creative methods."
               style: light
@@ -476,8 +518,6 @@ sections:
                     - text: "Automated Arithland competition score tracking with PHP, later optimized in C# for easy setup, reducing personnel needs and boosting efficiency."
                 - content:
                     - text: "Automated the competition participant registration by developing a user-friendly website from scratch, achieving efficient organization of a larger number of competitions within a shorter timeframe."
-                - content:
-                    - text: "Customized an online shop by WordPress and WooCommerce, which led to revenue growth and higher user satisfaction."
   volunteer_experience:
     style: blue
     title: Volunteer Experience
@@ -586,7 +626,7 @@ sections:
     title: Skills
     content:
       - item:
-          title: DevOps
+          title: Infra
           uppercase_title: true
           style: km-text-green
           content:
@@ -598,6 +638,10 @@ sections:
                   - name: Docker
                     amount: 2Y
                   - name: Kubernetes
+                    amount: 1Y
+                  - name: AWS (EC2, ECS, S3, RDS)
+                    amount: 1Y
+                  - name: Terraform
                     amount: 1Y
                   - name: GitHub Actions
                     amount: 1Y
@@ -626,6 +670,8 @@ sections:
                   - name: RabbitMQ
                     amount: 1Y
                   - name: Kafka
+                    amount: 1Y
+                  - name: Clickhouse
                     amount: 1Y
       - item:
           title: Languages & Frameworks
@@ -1274,6 +1320,6 @@ layout:
       - contact
       - skills
       - education
+      - languages
     main:
       - work_experience
-      - languages
